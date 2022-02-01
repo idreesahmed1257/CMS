@@ -360,6 +360,15 @@ input[type="password"] {
 .subject-container {
      display: flex;
      justify-content: space-around;
+     flex-direction: column;
+     padding-bottom: 20px;
+}
+.subject-container > div {
+     display: flex;
+     justify-content: space-around;
+}
+.Sub-div-1 {
+     margin-bottom: 60px;
 }
 
 .sem-result > h1 {
