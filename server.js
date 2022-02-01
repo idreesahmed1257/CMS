@@ -24,6 +24,11 @@ app.get('/Dashboard.html',(req,res)=>{
     // res.sendFile(path.join(__dirname,'/Student/main.js'));
 });
 
+//Rendering the attandence
+app.get('/attandence.html',(req,res)=>{
+    res.sendFile(path.join(__dirname,'/Student/attandence.html'));
+});
+
 // Server listening on the port
 app.listen(port,()=>{
     console.log(`App running on port ${port}`);
