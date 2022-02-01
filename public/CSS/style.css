@@ -35,7 +35,7 @@ body {
                rgba(140, 57, 27, 0.5),
                rgba(64, 13, 1, 1)
           ),
-          url("/public/Images/adminback.jpg");
+          url("../Images/aa.jpg");
      background-size: cover;
      height: 100%;
      width: 100%;
@@ -1044,4 +1044,29 @@ g {
      padding: 30px;
      float: right;
      margin-top: 40px;
+}
+
+-----------------------Admin-Add-Student-------------------
+/* Above clases used as login page */
+#log-Box {
+     height: 300px !important;
+}
+#main-cover {
+     top: 0;
+     background: linear-gradient(
+               to bottom,
+               rgba(140, 57, 27, 0.5),
+               rgba(64, 13, 1, 1)
+          ),
+          url("../Images/adminback.jpg");
+     background-size: cover;
+     height: 100%;
+     width: 100%;
+     background-repeat: no-repeat;
+     /* font-family: sans-serif; */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     font-family: "Andada Pro", serif;
 }

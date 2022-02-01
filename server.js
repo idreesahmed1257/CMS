@@ -54,6 +54,11 @@ app.get("/subject.html", (req, res) => {
      res.sendFile(path.join(__dirname, "/Student/subject.html"));
 });
 
+//Rendering the Admin-Add-Sunject
+app.get("/admin.html", (req, res) => {
+     res.sendFile(path.join(__dirname, "/Student/admin.html"));
+});
+
 // Server listening on the port
 app.listen(port, () => {
      console.log(`App running on port ${port}`);
