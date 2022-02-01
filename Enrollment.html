@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Enrollment</title>
+          <link rel="stylesheet" href="./CSS/style.css" />
+          <!-- ---------------Font-Awesome-------------------->
+          <script
+               src="https://kit.fontawesome.com/71580bc2e9.js"
+               crossorigin="anonymous"
+          ></script>
+          <link rel="icon" type="image/x-icon" href="./Images/logofinal.png" />
+
+          <!-- ----------------Jquery----------------------->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+          <!-- ---------------Googe-Fonts--------------------->
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+               href="https://fonts.googleapis.com/css2?family=Sora&display=swap"
+               rel="stylesheet"
+          />
+
+          <link
+               href="https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap"
+               rel="stylesheet"
+          />
+
+          <!-- -----------------------Slick Slider---------------------------->
+          <link
+               rel="stylesheet"
+               type="text/css"
+               href="./slick-1.8.1/slick-1.8.1/slick/slick.css"
+          />
+          <link
+               rel="stylesheet"
+               type="text/css"
+               href="./slick-1.8.1/slick-1.8.1/slick/slick-theme.scss"
+          />
+     </head>
+     <body>
+          <!-- -----------------------The Side Bar------------------------------------->
+          <div class="navbar-box">
+               <div class="navbar">
+                    <span class="titlename nav-title">
+                         <a href="./Dashboard.html"
+                              ><img
+                                   class="logo"
+                                   src="./Images/logofinal.png"
+                                   alt=""
+                              />
+                              <h1 id="nav-title-h1">CIST</h1>
+                         </a>
+                    </span>
+
+                    <span class="profile">
+                         <a href="">
+                              <img src="./Images/Man-avater.png" alt="" />
+                              <div>
+                                   <p>Welcome</p>
+                                   <h4>Idrees Ahmed</h4>
+                              </div>
+                         </a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-columns"></i>
+                         <a href="./Dashboard.html">Dashboard</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-book"></i>
+                         <a href="./subject.html">Subjects</a>
+                    </span>
+
+                    <span class="anchor">
+                         <i class="fas fa-stream"></i>
+                         <a href="./attandence.html">Attendance</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-user-edit"></i>
+                         <a href="./Enrollment.html">Enrollment</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-file-invoice-dollar"></i>
+                         <a href="./Fee.html">Fee Vouchers</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-poll"></i>
+                         <a href="./results.html">Results</a>
+                    </span>
+               </div>
+          </div>
+
+          <div class="page_container">
+               <!-- ------------------------Top-Bar------------------->
+               <div class="top-bar">
+                    <div class="my-account">
+                         <i
+                              class="fa fa-bell"
+                              aria-hidden="true"
+                              onclick="bell_icon()"
+                              onblur="bell_blur()"
+                         >
+                              <ul>
+                                   <a href="">
+                                        <li>hhggh</li>
+                                   </a>
+                                   <a href="">
+                                        <li
+                                             >Lorem ipsum dolor sit, amet
+                                             consectetur adipisicing elit. Nam,
+                                             omnis!</li
+                                        >
+                                   </a>
+                                   <a href="">
+                                        <li
+                                             >Lorem ipsum dolor sit, amet
+                                             consectetur adipisicing elit. Nam,
+                                             omnis!</li
+                                        >
+                                   </a>
+                                   <a href="">
+                                        <li
+                                             >Lorem ipsum dolor sit, amet
+                                             consectetur adipisicing elit. Nam,
+                                             omnis!</li
+                                        >
+                                   </a>
+                              </ul>
+                         </i>
+                         <img src="./Images/Man-avater.png" alt="" />
+                         <h4>Idrees Ahmed</h4>
+                         <i
+                              class="fas fa-chevron-down"
+                              onclick="meni_icon()"
+                              onblur="menu_blur()"
+                         >
+                              <ul>
+                                   <a href="">
+                                        <li>Profile</li>
+                                   </a>
+                                   <a href="">
+                                        <li>Settings</li>
+                                   </a>
+                                   <a href="">
+                                        <li>Grades</li>
+                                   </a>
+                                   <a href="">
+                                        <li>Messages</li>
+                                   </a>
+                                   <a href="">
+                                        <li>Logout</li>
+                                   </a>
+                              </ul>
+                         </i>
+                    </div>
+               </div>
+               <div class="subject">
+                    <h1>Courses</h1>
+                    <div class="subject-container autoplay">
+                         <a href="./subject.html" class="sub-anchor">
+                              <div class="subject-box">
+                                   <img src="./Images/WE.png" alt="" />
+                                   <h3>CS-330 Web Engineering</h3>
+                                   <h6>5th Semester(Fall 2021)</h6>
+                              </div>
+                         </a>
+                         <a href="./subject.html" class="sub-anchor">
+                              <div class="subject-box">
+                                   <img src="./Images/TW.png" alt="" />
+                                   <h3>HU-331 Technical Writting</h3>
+                                   <h6>5th Semester(Fall 2021)</h6>
+                              </div>
+                         </a>
+                         <a href="./subject.html" class="sub-anchor">
+                              <div class="subject-box">
+                                   <img src="./Images/SDA.png" alt="" />
+                                   <h3
+                                        >CS-421 Software Design &
+                                        Architecture</h3
+                                   >
+                                   <h6>5th Semester(Fall 2021)</h6>
+                              </div>
+                         </a>
+                         <a href="./subject.html" class="sub-anchor">
+                              <div class="subject-box">
+                                   <img src="./Images/OS.png" alt="" />
+                                   <h3>CS-103 Operating System</h3>
+                                   <h6>5th Semester(Fall 2021)</h6>
+                              </div>
+                         </a>
+                         <a href="./subject.html" class="sub-anchor">
+                              <div class="subject-box">
+                                   <img src="./Images/PE.png" alt="" />
+                                   <h3>HU-223 Professional Ethics</h3>
+                                   <h6>5th Semester(Fall 2021)</h6>
+                              </div>
+                         </a>
+                    </div>
+               </div>
+               <div class="enrollment-container">
+                    <div class="enrollment-input">
+                         <p for="enrollment-input">Enter Subject Code</p>
+                         <input type="text" placeholder="ABC-XX" />
+                    </div>
+                    <div class="enrollment-button">
+                         <button id="Btn-enroll" onclick="add_subject() "
+                              >Enroll Now</button
+                         >
+                    </div>
+               </div>
+          </div>
+     </body>
+     <script
+          type="text/javascript"
+          src="./slick-1.8.1/slick-1.8.1/slick/slick.min.js"
+     ></script>
+     <script
+          type="text/javascript"
+          src="./slick-1.8.1/slick-1.8.1/slick/slick.js"
+     ></script>
+     <script>
+          $(document).ready(function () {
+               $(".autoplay").slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+               });
+          });
+
+          // $(".autoplay").slick("slickAdd", "<div><h1>Hello</h1></div>");
+          // $(".autoplay").slick("slickAdd", "<a href="./subject.html" class="sub-anchor"><div class="subject-box"><img src="./Images/TW.png" alt="" /><h3>HU-331 Technical Writting</h3><h6>5th Semester(Fall 2021)</h6></div></a>");
+
+          // $("#book").load(function () {
+          //      function add_subject() {
+          //           var subject_container = $(".slick-track");
+          //           // subject_container.attr({
+          //           //      src: "/resources/hat.gif",
+          //           //      title: "jQuery",
+          //           //      alt: "jQuery Logo",
+          //           // });
+          //           subject_container.append(
+          //                '<div class="slick-slide slick-current slick-active" data-slick-index="1" id="" aria-hidden="false" style="width: 293px;" tabindex="-1"><div><a href="./subject.html" class="sub-anchor" style="width: 100%; display: inline-block;" tabindex="-1"><div class="subject-box"<img src="./Images/SDA.png" alt=""><h3>CS-421 Software Design &amp;Architecture</h3><h6>5th Semester(Fall 2021)</h6></div></a></div></div>'
+          //           );
+          //           //    subject_container.css({
+          //           //         height: "150px",
+          //           //         width: "200px",
+          //           //         "margin-top": "50px",
+          //           //    });
+          //           // '<a href="./subject.html" class"sub-anchor"><div class="subject-box"><img src="./Images/PE.png" alt=""/<h3>CS-330 Web Engineering</h3><h6>5th Semester(Fall 2021)</h6></div></a>'
+          //      }
+          // });
+     </script>
+</html>

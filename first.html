@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Login Page</title>
+          <link rel="stylesheet" href="./CSS/style.css" />
+     </head>
+     <body>
+          <div id="sample"></div>
+          <div class="main-cover" id="main-cover1">
+               <div class="titlename">
+                    <img id="main-logo" src="./Images/logofinal.png" alt="" />
+                    <h1 id="heading1">CIST</h1>
+               </div>
+               <div class="loginBox">
+                    <img
+                         class="logo loginlogo"
+                         src="/Images/logofinal.png"
+                         alt=""
+                    />
+                    <h1>Login here</h1>
+                    <form action="./Dashboard.html">
+                         <label for="Username">Username</label>
+                         <input
+                              type="text"
+                              name=""
+                              placeholder="Enter Username"
+                              required
+                         /><br /><br />
+                         <label for="password">Password</label>
+                         <input
+                              type="password"
+                              name=""
+                              placeholder="Enter Password"
+                              required
+                         />
+                         <br /><br />
+                         <input
+                              type="submit"
+                              name=""
+                              value="Login"
+                              id="demo"
+                         /><br /><br />
+                         <a href="#forgot">Forgot Password</a><br />
+                         <input type="radio" />
+                         <label for="remember">Remember Me</label>
+                    </form>
+               </div>
+               <button onclick="loadDoc()" id="btn">Click Me</button>
+          </div>
+          <script>
+               function loadDoc() {
+                    const xhttp = new XMLHttpRequest();
+                    xhttp.onload = function () {
+                         document.getElementById("sample").innerHTML =
+                              this.responseText;
+                    };
+                    xhttp.open("GET", "./Dashboard.html", true);
+                    xhttp.send();
+               }
+          </script>
+     </body>
+</html>

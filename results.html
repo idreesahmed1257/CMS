@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Results</title>
+          <link rel="stylesheet" href="./CSS/style.css" />
+          <!-- ---------------Font-Awesome-------------------->
+          <script
+               src="https://kit.fontawesome.com/71580bc2e9.js"
+               crossorigin="anonymous"
+          ></script>
+          <link rel="icon" type="image/x-icon" href="./Images/logofinal.png" />
+
+          <!-- ----------------Jquery----------------------->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+          <!-- ---------------Googe-Fonts--------------------->
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+               href="https://fonts.googleapis.com/css2?family=Sora&display=swap"
+               rel="stylesheet"
+          />
+
+          <link
+               href="https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap"
+               rel="stylesheet"
+          />
+     </head>
+     <body>
+          <!-- -----------------------The Side Bar------------------------------------->
+          <div class="navbar-box">
+               <div class="navbar">
+                    <span class="titlename nav-title">
+                         <a href="./Dashboard.html"
+                              ><img
+                                   class="logo"
+                                   src="./Images/logofinal.png"
+                                   alt=""
+                              />
+                              <h1 id="nav-title-h1">CIST</h1>
+                         </a>
+                    </span>
+
+                    <span class="profile">
+                         <a href="">
+                              <img src="./Images/Man-avater.png" alt="" />
+                              <div>
+                                   <p>Welcome</p>
+                                   <h4>Idrees Ahmed</h4>
+                              </div>
+                         </a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-columns"></i>
+                         <a href="./Dashboard.html">Dashboard</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-book"></i>
+                         <a href="./subject.html">Subjects</a>
+                    </span>
+
+                    <span class="anchor">
+                         <i class="fas fa-stream"></i>
+                         <a href="./attandence.html">Attendance</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-user-edit"></i>
+                         <a href="#Enrollment">Enrollment</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-file-invoice-dollar"></i>
+                         <a href="./Fee.html">Fee Vouchers</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-poll"></i>
+                         <a href="#Results">Results</a>
+                    </span>
+               </div>
+          </div>
+
+          <div class="page_container">
+               <!-- ------------------------Top-Bar------------------->
+               <div class="top-bar">
+                    <div class="my-account">
+                         <i
+                              class="fa fa-bell"
+                              aria-hidden="true"
+                              onclick="bell_icon()"
+                              onblur="bell_blur()"
+                         >
+                              <ul>
+                                   <a href="">
+                                        <li>hhggh</li>
+                                   </a>
+                                   <a href="">
+                                        <li
+                                             >Lorem ipsum dolor sit, amet
+                                             consectetur adipisicing elit. Nam,
+                                             omnis!</li
+                                        >
+                                   </a>
+                                   <a href="">
+                                        <li
+                                             >Lorem ipsum dolor sit, amet
+                                             consectetur adipisicing elit. Nam,
+                                             omnis!</li
+                                        >
+                                   </a>
+                                   <a href="">
+                                        <li
+                                             >Lorem ipsum dolor sit, amet
+                                             consectetur adipisicing elit. Nam,
+                                             omnis!</li
+                                        >
+                                   </a>
+                              </ul>
+                         </i>
+                         <img src="./Images/Man-avater.png" alt="" />
+                         <h4>Idrees Ahmed</h4>
+                         <i
+                              class="fas fa-chevron-down"
+                              onclick="meni_icon()"
+                              onblur="menu_blur()"
+                         >
+                              <ul>
+                                   <a href="">
+                                        <li>Profile</li>
+                                   </a>
+                                   <a href="">
+                                        <li>Settings</li>
+                                   </a>
+                                   <a href="">
+                                        <li>Grades</li>
+                                   </a>
+                                   <a href="">
+                                        <li>Messages</li>
+                                   </a>
+                                   <a href="">
+                                        <li>Logout</li>
+                                   </a>
+                              </ul>
+                         </i>
+                    </div>
+               </div>
+               <div class="sem-result">
+                    <h1>Results</h1>
+                    <div class="table-subject subject-names">
+                         <button onclick="WE()" id="web-btn"
+                              >Semester 1 <p>3.37</p></button
+                         >
+                         <button onclick="SDA()" id="sda-btn"
+                              >Semester 2 <p>3.21</p></button
+                         >
+                         <button onclick="PE()" id="pe-btn"
+                              >Semester 3 <p>2.99</p></button
+                         >
+                         <button onclick="OS()" id="os-btn"
+                              >Semester 4 <p>3.15</p></button
+                         >
+                         <button onclick="TW()" id="tw-btn"
+                              >Semester 5 <p>3.56</p></button
+                         >
+                    </div>
+               </div>
+               <div class="result-table">
+                    <table id="customers" class="sem-1">
+                         <tr class="table-row-1">
+                              <th>Subject</th>
+                              <th>Grade</th>
+                              <th>GPA</th>
+                         </tr>
+                         <tr>
+                              <td>FOP</td>
+                              <td>A</td>
+                              <td>4.0</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                    </table>
+                    <table id="customers" class="sem-2">
+                         <tr class="table-row-1">
+                              <th>Subject</th>
+                              <th>Grade</th>
+                              <th>GPA</th>
+                         </tr>
+                         <tr>
+                              <td>OOP</td>
+                              <td>A</td>
+                              <td>4.0</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                    </table>
+                    <table id="customers" class="sem-3">
+                         <tr class="table-row-1">
+                              <th>Subject</th>
+                              <th>Grade</th>
+                              <th>GPA</th>
+                         </tr>
+                         <tr>
+                              <td>Database</td>
+                              <td>A</td>
+                              <td>4.0</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                    </table>
+                    <table id="customers" class="sem-4">
+                         <tr class="table-row-1">
+                              <th>Subject</th>
+                              <th>Grade</th>
+                              <th>GPA</th>
+                         </tr>
+                         <tr>
+                              <td>Computer Netwroks</td>
+                              <td>A</td>
+                              <td>4.0</td>
+                         </tr>
+                         <tr>
+                              <td>Theory of autometa</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                    </table>
+                    <table id="customers" class="sem-5">
+                         <tr class="table-row-1">
+                              <th>Subject</th>
+                              <th>Grade</th>
+                              <th>GPA</th>
+                         </tr>
+                         <tr>
+                              <td>Web Engineering</td>
+                              <td>A</td>
+                              <td>4.0</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                         <tr>
+                              <td>Discrete Mathematics</td>
+                              <td>B+</td>
+                              <td>3.5</td>
+                         </tr>
+                    </table>
+               </div>
+               <div class="row-2">
+                    <div id="curve_chart" class="line-chart"></div>
+                    <div class="pie-container single-pie">
+                         <div class="pie-box">
+                              <div class="pie-chart" data-percent="3.5"
+                                   >3.5</div
+                              >
+                              <h2>CGPA</h2>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </body>
+     <script>
+          $(document).ready(function () {
+               google.charts.load("current", { packages: ["corechart"] });
+               google.charts.setOnLoadCallback(drawChart);
+
+               function drawChart() {
+                    var data = google.visualization.arrayToDataTable([
+                         ["semester", "CGPA"],
+                         ["Sem 1", 3.0],
+                         ["Sem 2", 3.3],
+                         ["Sem 3", 3.0],
+                         ["Sem 4", 2.75],
+                         ["Sem 5", 2.94],
+                    ]);
+
+                    var options = {
+                         title: "CGPA Graph",
+                         curveType: "function",
+                         legend: { position: "bottom" },
+                    };
+
+                    var chart = new google.visualization.LineChart(
+                         document.getElementById("curve_chart")
+                    );
+
+                    chart.draw(data, options);
+               }
+          });
+
+          //-----------------for Pie Chart------------------
+          $(document).ready(function () {
+               $(function () {
+                    $(".pie-chart").easyPieChart({
+                         size: 150,
+                         barColor: "#8c391b",
+                         scaleColor: false,
+                         lineWidth: 10,
+                         trackColor: "#e19d82",
+                         animate: 1700,
+                         min: 0,
+                         max: 40,
+                    });
+               });
+          });
+
+          var web = $(".sem-1");
+          var sda = $(".sem-2");
+          var pe = $(".sem-3");
+          var os = $(".sem-4");
+          var tw = $(".sem-5");
+          var webbtn = $("#web-btn");
+          var sdabtn = $("#sda-btn");
+          var pebtn = $("#pe-btn");
+          var osbtn = $("#os-btn");
+          var twbtn = $("#tw-btn");
+          web.css("visibility", "visible");
+          webbtn.css("border", "5px solid var(--color3)");
+          function WE() {
+               web.css("visibility", "visible");
+               sda.css("visibility", "hidden");
+               pe.css("visibility", "hidden");
+               os.css("visibility", "hidden");
+               tw.css("visibility", "hidden");
+               webbtn.css("border", "5px solid var(--color3)");
+               sdabtn.css("border", "5px solid var(--color5)");
+               pebtn.css("border", "5px solid var(--color5)");
+               osbtn.css("border", "5px solid var(--color5)");
+               twbtn.css("border", "5px solid var(--color5)");
+          }
+          function SDA() {
+               web.css("visibility", "hidden");
+               sda.css("visibility", "visible");
+               pe.css("visibility", "hidden");
+               os.css("visibility", "hidden");
+               tw.css("visibility", "hidden");
+               webbtn.css("border", "5px solid var(--color5)");
+               sdabtn.css("border", "5px solid var(--color3)");
+               pebtn.css("border", "5px solid var(--color5)");
+               osbtn.css("border", "5px solid var(--color5)");
+               twbtn.css("border", "5px solid var(--color5)");
+          }
+          function PE() {
+               web.css("visibility", "hidden");
+               sda.css("visibility", "hidden");
+               pe.css("visibility", "visible");
+               os.css("visibility", "hidden");
+               tw.css("visibility", "hidden");
+
+               webbtn.css("border", "5px solid var(--color5)");
+               sdabtn.css("border", "5px solid var(--color5)");
+               pebtn.css("border", "5px solid var(--color3)");
+               osbtn.css("border", "5px solid var(--color5)");
+               twbtn.css("border", "5px solid var(--color5)");
+          }
+          function OS() {
+               web.css("visibility", "hidden");
+               sda.css("visibility", "hidden");
+               pe.css("visibility", "hidden");
+               os.css("visibility", "visible");
+               tw.css("visibility", "hidden");
+
+               webbtn.css("border", "5px solid var(--color5)");
+               sdabtn.css("border", "5px solid var(--color5)");
+               pebtn.css("border", "5px solid var(--color5)");
+               osbtn.css("border", "5px solid var(--color3)");
+               twbtn.css("border", "5px solid var(--color5)");
+          }
+          function TW() {
+               web.css("visibility", "hidden");
+               sda.css("visibility", "hidden");
+               pe.css("visibility", "hidden");
+               os.css("visibility", "hidden");
+               tw.css("visibility", "visible");
+
+               webbtn.css("border", "5px solid var(--color5)");
+               sdabtn.css("border", "5px solid var(--color5)");
+               pebtn.css("border", "5px solid var(--color5)");
+               osbtn.css("border", "5px solid var(--color5)");
+               twbtn.css("border", "5px solid var(--color3)");
+          }
+
+          var bell_Count = 0;
+          function bell_icon() {
+               if (bell_Count % 2 == 0) {
+                    document.querySelector(".fa-bell > ul").style.display =
+                         "block";
+               } else {
+                    document.querySelector(".fa-bell > ul").style.display =
+                         "none";
+               }
+               bell_Count++;
+          }
+          var menu_Count = 0;
+          function meni_icon() {
+               if (menu_Count % 2 == 0) {
+                    document.querySelector(
+                         ".fa-chevron-down > ul"
+                    ).style.display = "block";
+               } else {
+                    document.querySelector(
+                         ".fa-chevron-down > ul"
+                    ).style.display = "none";
+               }
+               menu_Count++;
+          }
+          function menu_blur() {
+               document.querySelector(".fa-chevron-down > ul").style.display =
+                    "none";
+          }
+          function bell_blur() {
+               document.querySelector(".fa-bell > ul").style.display = "none";
+          }
+
+          var sem_1 = [
+               {
+                    subject: "Programming",
+                    Grade: "A+",
+                    GPA: 4.0,
+               },
+               {
+                    subject: "DM",
+                    Grade: "A+",
+                    GPA: 4.0,
+               },
+               {
+                    subject: "English",
+                    Grade: "A+",
+                    GPA: 4.0,
+               },
+               {
+                    subject: "Physics",
+                    Grade: "A+",
+                    GPA: 4.0,
+               },
+               {
+                    subject: "Pak Studies",
+                    Grade: "A+",
+                    GPA: 4.0,
+               },
+          ];
+     </script>
+
+     <!-- ----line-chart------------- -->
+     <script
+          type="text/javascript"
+          src="https://www.gstatic.com/charts/loader.js"
+     ></script>
+     <script src="./jquery.easypiechart Results.js"></script>
+</html>

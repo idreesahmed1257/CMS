@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Subjects</title>
+          <link rel="stylesheet" href="./CSS/style.css" />
+          <!-- ---------------Font-Awesome-------------------->
+          <script
+               src="https://kit.fontawesome.com/71580bc2e9.js"
+               crossorigin="anonymous"
+          ></script>
+          <link rel="icon" type="image/x-icon" href="./Images/logofinal.png" />
+
+          <!-- ----------------Jquery----------------------->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+          <!-- ---------------Googe-Fonts--------------------->
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+               href="https://fonts.googleapis.com/css2?family=Sora&display=swap"
+               rel="stylesheet"
+          />
+
+          <link
+               href="https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap"
+               rel="stylesheet"
+          />
+
+          <!-- -----------------------Slick Slider---------------------------->
+          <link
+               rel="stylesheet"
+               type="text/css"
+               href="./slick-1.8.1/slick-1.8.1/slick/slick.css"
+          />
+          <link
+               rel="stylesheet"
+               type="text/css"
+               href="./slick-1.8.1/slick-1.8.1/slick/slick-theme.scss"
+          />
+     </head>
+     <body>
+          <div class="navbar-box" style="min-height: 1550px">
+               <div class="navbar">
+                    <span class="titlename nav-title">
+                         <a href="./Dashboard.html"
+                              ><img
+                                   class="logo"
+                                   src="./Images/logofinal.png"
+                                   alt=""
+                              />
+                              <h1 id="nav-title-h1">CIST</h1>
+                         </a>
+                    </span>
+                    <span class="profile">
+                         <a href="">
+                              <img src="./Images/Man-avater.png" alt="" />
+                              <div>
+                                   <p>Welcome</p>
+                                   <h4>Idrees Ahmed</h4>
+                              </div>
+                         </a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-columns"></i>
+                         <a href="./Dashboard.html">Dashboard</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-book"></i>
+                         <a href="./subject.html">Subjects</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-stream"></i>
+                         <a href="./attandence.html">Attendance</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-user-edit"></i>
+                         <a href="./Enrollment.html">Enrollment</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-file-invoice-dollar"></i>
+                         <a href="#Fee">Fee Vouchers</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-poll"></i>
+                         <a href="./results.html">Results</a>
+                    </span>
+               </div>
+          </div>
+
+          <div class="page_container">
+               <!--------------------------Top-Bar------------------->
+               <div class="top-bar">
+                    <div class="my-account">
+                         <i
+                              class="fa fa-bell"
+                              aria-hidden="true"
+                              onclick="bell_icon()"
+                              onblur="bell_blur()"
+                         >
+                              <ul>
+                                   <a href="">
+                                        <li>hhggh</li>
+                                   </a>
+                                   <a href="">
+                                        <li
+                                             >Lorem ipsum dolor sit, amet
+                                             consectetur adipisicing elit. Nam,
+                                             omnis!</li
+                                        >
+                                   </a>
+                                   <a href="">
+                                        <li
+                                             >Lorem ipsum dolor sit, amet
+                                             consectetur adipisicing elit. Nam,
+                                             omnis!</li
+                                        >
+                                   </a>
+                                   <a href="">
+                                        <li
+                                             >Lorem ipsum dolor sit, amet
+                                             consectetur adipisicing elit. Nam,
+                                             omnis!</li
+                                        >
+                                   </a>
+                              </ul>
+                         </i>
+                         <img src="./Images/Man-avater.png" alt="" />
+                         <h4>Idrees Ahmed</h4>
+                         <i
+                              class="fas fa-chevron-down"
+                              onclick="meni_icon()"
+                              onblur="menu_blur()"
+                         >
+                              <ul>
+                                   <a href="">
+                                        <li>Profile</li>
+                                   </a>
+                                   <a href="">
+                                        <li>Settings</li>
+                                   </a>
+                                   <a href="">
+                                        <li>Grades</li>
+                                   </a>
+                                   <a href="">
+                                        <li>Messages</li>
+                                   </a>
+                                   <a href="">
+                                        <li>Logout</li>
+                                   </a>
+                              </ul>
+                         </i>
+                    </div>
+               </div>
+               <!-- ----------------subject names-------------- -->
+               <div class="table-subject subject-names">
+                    <button onclick="WE()" id="web-btn">Web Engineering</button>
+                    <button onclick="SDA()" id="sda-btn"
+                         >Software Design & Architecture</button
+                    >
+                    <button onclick="PE()" id="pe-btn"
+                         >Professional Ethics</button
+                    >
+                    <button onclick="OS()" id="os-btn">Operating System</button>
+                    <button onclick="TW()" id="tw-btn"
+                         >Technical Writting</button
+                    >
+               </div>
+               <!-- -----------------Files------------------ -->
+               <div class="files-container web-files">
+                    <div class="file-container2">
+                         <div class="files-week">
+                              <h2>Week-1</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Web</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-2</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-3</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-4</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-5</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-6</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-7</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="files-container sda-files">
+                    <div class="file-container2">
+                         <div class="files-week">
+                              <h2>Week-1</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >sda</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-2</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-3</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-4</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-5</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-6</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-7</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="files-container pe-files">
+                    <div class="file-container2">
+                         <div class="files-week">
+                              <h2>Week-1</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >PE</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-2</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-3</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-4</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-5</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-6</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-7</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="files-container os-files">
+                    <div class="file-container2">
+                         <div class="files-week">
+                              <h2>Week-1</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >OS</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-2</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-3</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-4</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-5</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-6</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-7</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="files-container tw-files">
+                    <div class="file-container2">
+                         <div class="files-week">
+                              <h2>Week-1</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >TW</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-2</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-3</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-4</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-5</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-6</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                         <div class="files-week">
+                              <h2>Week-7</h2>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                              <div class="file">
+                                   <i class="fas fa-copy"></i>
+                                   <a
+                                        href="./Project_BESE25. (1).pdf"
+                                        target="_blank"
+                                        >Assignment1</a
+                                   >
+                                   <input
+                                        type="checkbox"
+                                        name="sub-file"
+                                        value="sub-file"
+                                   />
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </body>
+     <script>
+          var bell_Count = 0;
+          function bell_icon() {
+               if (bell_Count % 2 == 0) {
+                    document.querySelector(".fa-bell > ul").style.display =
+                         "block";
+               } else {
+                    document.querySelector(".fa-bell > ul").style.display =
+                         "none";
+               }
+               bell_Count++;
+          }
+          var menu_Count = 0;
+          function meni_icon() {
+               if (menu_Count % 2 == 0) {
+                    document.querySelector(
+                         ".fa-chevron-down > ul"
+                    ).style.display = "block";
+               } else {
+                    document.querySelector(
+                         ".fa-chevron-down > ul"
+                    ).style.display = "none";
+               }
+               menu_Count++;
+          }
+          function menu_blur() {
+               document.querySelector(".fa-chevron-down > ul").style.display =
+                    "none";
+          }
+          function bell_blur() {
+               document.querySelector(".fa-bell > ul").style.display = "none";
+          }
+
+          var web = $(".web-files");
+          var sda = $(".sda-files");
+          var pe = $(".pe-files");
+          var os = $(".os-files");
+          var tw = $(".tw-files");
+          var webbtn = $("#web-btn");
+          var sdabtn = $("#sda-btn");
+          var pebtn = $("#pe-btn");
+          var osbtn = $("#os-btn");
+          var twbtn = $("#tw-btn");
+          web.css("visibility", "visible");
+          webbtn.css("border", "5px solid var(--color3)");
+          function WE() {
+               web.css("visibility", "visible");
+               sda.css("visibility", "hidden");
+               pe.css("visibility", "hidden");
+               os.css("visibility", "hidden");
+               tw.css("visibility", "hidden");
+               webbtn.css("border", "5px solid var(--color3)");
+               sdabtn.css("border", "5px solid var(--color5)");
+               pebtn.css("border", "5px solid var(--color5)");
+               osbtn.css("border", "5px solid var(--color5)");
+               twbtn.css("border", "5px solid var(--color5)");
+          }
+          function SDA() {
+               web.css("visibility", "hidden");
+               sda.css("visibility", "visible");
+               pe.css("visibility", "hidden");
+               os.css("visibility", "hidden");
+               tw.css("visibility", "hidden");
+               webbtn.css("border", "5px solid var(--color5)");
+               sdabtn.css("border", "5px solid var(--color3)");
+               pebtn.css("border", "5px solid var(--color5)");
+               osbtn.css("border", "5px solid var(--color5)");
+               twbtn.css("border", "5px solid var(--color5)");
+          }
+          function PE() {
+               web.css("visibility", "hidden");
+               sda.css("visibility", "hidden");
+               pe.css("visibility", "visible");
+               os.css("visibility", "hidden");
+               tw.css("visibility", "hidden");
+
+               webbtn.css("border", "5px solid var(--color5)");
+               sdabtn.css("border", "5px solid var(--color5)");
+               pebtn.css("border", "5px solid var(--color3)");
+               osbtn.css("border", "5px solid var(--color5)");
+               twbtn.css("border", "5px solid var(--color5)");
+          }
+          function OS() {
+               web.css("visibility", "hidden");
+               sda.css("visibility", "hidden");
+               pe.css("visibility", "hidden");
+               os.css("visibility", "visible");
+               tw.css("visibility", "hidden");
+
+               webbtn.css("border", "5px solid var(--color5)");
+               sdabtn.css("border", "5px solid var(--color5)");
+               pebtn.css("border", "5px solid var(--color5)");
+               osbtn.css("border", "5px solid var(--color3)");
+               twbtn.css("border", "5px solid var(--color5)");
+          }
+          function TW() {
+               web.css("visibility", "hidden");
+               sda.css("visibility", "hidden");
+               pe.css("visibility", "hidden");
+               os.css("visibility", "hidden");
+               tw.css("visibility", "visible");
+
+               webbtn.css("border", "5px solid var(--color5)");
+               sdabtn.css("border", "5px solid var(--color5)");
+               pebtn.css("border", "5px solid var(--color5)");
+               osbtn.css("border", "5px solid var(--color5)");
+               twbtn.css("border", "5px solid var(--color3)");
+          }
+     </script>
+</html>

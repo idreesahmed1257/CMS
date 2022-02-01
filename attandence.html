@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Attendance</title>
+          <link rel="stylesheet" href="./CSS/style.css" />
+          <!-- ---------------Font-Awesome-------------------->
+          <script
+               src="https://kit.fontawesome.com/71580bc2e9.js"
+               crossorigin="anonymous"
+          ></script>
+          <link rel="icon" type="image/x-icon" href="./Images/logofinal.png" />
+
+          <!-- ----------------Jquery----------------------->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+          <!-- ---------------Googe-Fonts--------------------->
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+               href="https://fonts.googleapis.com/css2?family=Sora&display=swap"
+               rel="stylesheet"
+          />
+
+          <link
+               href="https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap"
+               rel="stylesheet"
+          />
+
+          <!-- -----------------------Slick Slider---------------------------->
+          <link
+               rel="stylesheet"
+               type="text/css"
+               href="./slick-1.8.1/slick-1.8.1/slick/slick.css"
+          />
+          <link
+               rel="stylesheet"
+               type="text/css"
+               href="./slick-1.8.1/slick-1.8.1/slick/slick-theme.scss"
+          />
+     </head>
+     <body>
+          <!-- -----------------------The Side Bar------------------------------------->
+          <div class="navbar-box" style="min-height: 1050px">
+               <div class="navbar">
+                    <span class="titlename nav-title">
+                         <a href="./Dashboard.html"
+                              ><img
+                                   class="logo"
+                                   src="./Images/logofinal.png"
+                                   alt=""
+                              />
+                              <h1 id="nav-title-h1">CIST</h1>
+                         </a>
+                    </span>
+                    <span class="profile">
+                         <a href="">
+                              <img src="./Images/Man-avater.png" alt="" />
+                              <div>
+                                   <p>Welcome</p>
+                                   <h4>Idrees Ahmed</h4>
+                              </div>
+                         </a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-columns"></i>
+                         <a href="./Dashboard.html">Dashboard</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-book"></i>
+                         <a href="./subject.html">Subjects</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-stream"></i>
+                         <a href="./attandence.html">Attendance</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-user-edit"></i>
+                         <a href="./Enrollment.html">Enrollment</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-file-invoice-dollar"></i>
+                         <a href="./Fee.html">Fee Vouchers</a>
+                    </span>
+                    <span class="anchor">
+                         <i class="fas fa-poll"></i>
+                         <a href="./results.html">Results</a>
+                    </span>
+               </div>
+          </div>
+
+          <div class="page_container">
+               <!-- ------------------------Top-Bar------------------->
+               <div class="top-bar">
+                    <div class="my-account">
+                         <i
+                              class="fa fa-bell"
+                              aria-hidden="true"
+                              onclick="bell_icon()"
+                              onblur="bell_blur()"
+                         >
+                              <ul>
+                                   <a href="">
+                                        <li>hhggh</li>
+                                   </a>
+                                   <a href="">
+                                        <li
+                                             >Lorem ipsum dolor sit, amet
+                                             consectetur adipisicing elit. Nam,
+                                             omnis!</li
+                                        >
+                                   </a>
+                                   <a href="">
+                                        <li
+                                             >Lorem ipsum dolor sit, amet
+                                             consectetur adipisicing elit. Nam,
+                                             omnis!</li
+                                        >
+                                   </a>
+                                   <a href="">
+                                        <li
+                                             >Lorem ipsum dolor sit, amet
+                                             consectetur adipisicing elit. Nam,
+                                             omnis!</li
+                                        >
+                                   </a>
+                              </ul>
+                         </i>
+                         <img src="./Images/Man-avater.png" alt="" />
+                         <h4>Idrees Ahmed</h4>
+                         <i
+                              class="fas fa-chevron-down"
+                              onclick="meni_icon()"
+                              onblur="menu_blur()"
+                         >
+                              <ul>
+                                   <a href="">
+                                        <li>Profile</li>
+                                   </a>
+                                   <a href="">
+                                        <li>Settings</li>
+                                   </a>
+                                   <a href="">
+                                        <li>Grades</li>
+                                   </a>
+                                   <a href="">
+                                        <li>Messages</li>
+                                   </a>
+                                   <a href="">
+                                        <li>Logout</li>
+                                   </a>
+                              </ul>
+                         </i>
+                    </div>
+               </div>
+
+               <!-- ----------------Pie Chart--------------------------->
+               <div class="pie-container">
+                    <h1>Student Attendance</h1>
+                    <div class="pie-flex-area">
+                         <div class="pie-box">
+                              <div class="pie-chart" data-percent="75">75%</div>
+                              <h2>WE</h2>
+                         </div>
+                         <div class="pie-box">
+                              <div class="pie-chart" data-percent="80">80%</div>
+                              <h2>SDA</h2>
+                         </div>
+
+                         <div class="pie-box">
+                              <div class="pie-chart" data-percent="100"
+                                   >100%</div
+                              >
+                              <h2>TW</h2>
+                         </div>
+
+                         <div class="pie-box">
+                              <div class="pie-chart" data-percent="35">35%</div>
+                              <h2>OS</h2>
+                         </div>
+
+                         <div class="pie-box">
+                              <div class="pie-chart" data-percent="55">55%</div>
+                              <h2>PE</h2>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="table-container">
+                    <div class="table-subject">
+                         <button onclick="WE()" id="web-btn"
+                              >Web Engineering</button
+                         >
+                         <button onclick="SDA()" id="sda-btn"
+                              >Software Design & Architecture</button
+                         >
+                         <button onclick="PE()" id="pe-btn"
+                              >Professional Ethics</button
+                         >
+                         <button onclick="OS()" id="os-btn"
+                              >Operating System</button
+                         >
+                         <button onclick="TW()" id="tw-btn"
+                              >Technical Writting</button
+                         >
+                    </div>
+                    <table id="customers" class="web">
+                         <tr class="table-row-1">
+                              <th>Sr no.</th>
+                              <th>Date</th>
+                              <th>Status</th>
+                         </tr>
+                         <tr>
+                              <td>1</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>2</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>3</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>4</td>
+                              <td>27-01-2022</td>
+                              <td>A</td>
+                         </tr>
+                         <tr>
+                              <td>5</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>6</td>
+                              <td>27-01-2022</td>
+                              <td>A</td>
+                         </tr>
+                         <tr>
+                              <td>7</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>8</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>9</td>
+                              <td>27-01-2022</td>
+                              <td>A</td>
+                         </tr>
+                         <tr>
+                              <td>10</td>
+                              <td>27-01-2022</td>
+                              <td>Web</td>
+                         </tr>
+                    </table>
+
+                    <table id="customers" class="sda">
+                         <tr class="table-row-1">
+                              <th>Sr no.</th>
+                              <th>Date</th>
+                              <th>Status</th>
+                         </tr>
+                         <tr>
+                              <td>1</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>2</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>3</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>4</td>
+                              <td>27-01-2022</td>
+                              <td>A</td>
+                         </tr>
+                         <tr>
+                              <td>5</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>6</td>
+                              <td>27-01-2022</td>
+                              <td>A</td>
+                         </tr>
+                         <tr>
+                              <td>7</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>8</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>9</td>
+                              <td>27-01-2022</td>
+                              <td>A</td>
+                         </tr>
+                         <tr>
+                              <td>10</td>
+                              <td>27-01-2021</td>
+                              <td>sda</td>
+                         </tr>
+                    </table>
+
+                    <table id="customers" class="pe">
+                         <tr class="table-row-1">
+                              <th>Sr no.</th>
+                              <th>Date</th>
+                              <th>Status</th>
+                         </tr>
+                         <tr>
+                              <td>1</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>2</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>3</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>4</td>
+                              <td>27-01-2022</td>
+                              <td>A</td>
+                         </tr>
+                         <tr>
+                              <td>5</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>6</td>
+                              <td>27-01-2022</td>
+                              <td>A</td>
+                         </tr>
+                         <tr>
+                              <td>7</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>8</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>9</td>
+                              <td>27-01-2022</td>
+                              <td>A</td>
+                         </tr>
+                         <tr>
+                              <td>10</td>
+                              <td>27-01-2021</td>
+                              <td>PE</td>
+                         </tr>
+                    </table>
+                    <table id="customers" class="os">
+                         <tr class="table-row-1">
+                              <th>Sr no.</th>
+                              <th>Date</th>
+                              <th>Status</th>
+                         </tr>
+                         <tr>
+                              <td>1</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>2</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>3</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>4</td>
+                              <td>27-01-2022</td>
+                              <td>A</td>
+                         </tr>
+                         <tr>
+                              <td>5</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>6</td>
+                              <td>27-01-2022</td>
+                              <td>A</td>
+                         </tr>
+                         <tr>
+                              <td>7</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>8</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>9</td>
+                              <td>27-01-2022</td>
+                              <td>A</td>
+                         </tr>
+                         <tr>
+                              <td>10</td>
+                              <td>27-01-2021</td>
+                              <td>OS</td>
+                         </tr>
+                    </table>
+                    <table id="customers" class="tw">
+                         <tr class="table-row-1">
+                              <th>Sr no.</th>
+                              <th>Date</th>
+                              <th>Status</th>
+                         </tr>
+                         <tr>
+                              <td>1</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>2</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>3</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>4</td>
+                              <td>27-01-2022</td>
+                              <td>A</td>
+                         </tr>
+                         <tr>
+                              <td>5</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>6</td>
+                              <td>27-01-2022</td>
+                              <td>A</td>
+                         </tr>
+                         <tr>
+                              <td>7</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>8</td>
+                              <td>27-01-2022</td>
+                              <td>P</td>
+                         </tr>
+                         <tr>
+                              <td>9</td>
+                              <td>27-01-2022</td>
+                              <td>A</td>
+                         </tr>
+                         <tr>
+                              <td>10</td>
+                              <td>27-01-2021</td>
+                              <td>TW</td>
+                         </tr>
+                    </table>
+               </div>
+          </div>
+     </body>
+
+     <script src="./jquery.easypiechart.js"></script>
+
+     <script>
+          // -----------------bell-----------------
+          var bell_Count = 0;
+          function bell_icon() {
+               if (bell_Count % 2 == 0) {
+                    document.querySelector(".fa-bell > ul").style.display =
+                         "block";
+               } else {
+                    document.querySelector(".fa-bell > ul").style.display =
+                         "none";
+               }
+               bell_Count++;
+          }
+          var menu_Count = 0;
+          function meni_icon() {
+               if (menu_Count % 2 == 0) {
+                    document.querySelector(
+                         ".fa-chevron-down > ul"
+                    ).style.display = "block";
+               } else {
+                    document.querySelector(
+                         ".fa-chevron-down > ul"
+                    ).style.display = "none";
+               }
+               menu_Count++;
+          }
+          function menu_blur() {
+               document.querySelector(
+                    ".fa-chevron-down > ul"
+               ).style.visibility = "hidden";
+          }
+          function bell_blur() {
+               document.querySelector(".fa-bell > ul").style.display = "none";
+          }
+
+          // --------------attendance-----------------
+          var web = $(".web");
+          var sda = $(".sda");
+          var pe = $(".pe");
+          var os = $(".os");
+          var tw = $(".tw");
+          var webbtn = $("#web-btn");
+          var sdabtn = $("#sda-btn");
+          var pebtn = $("#pe-btn");
+          var osbtn = $("#os-btn");
+          var twbtn = $("#tw-btn");
+          web.css("visibility", "visible");
+          webbtn.css("border", "5px solid var(--color3)");
+          function WE() {
+               web.css("visibility", "visible");
+               sda.css("visibility", "hidden");
+               pe.css("visibility", "hidden");
+               os.css("visibility", "hidden");
+               tw.css("visibility", "hidden");
+               webbtn.css("border", "5px solid var(--color3)");
+               sdabtn.css("border", "5px solid var(--color5)");
+               pebtn.css("border", "5px solid var(--color5)");
+               osbtn.css("border", "5px solid var(--color5)");
+               twbtn.css("border", "5px solid var(--color5)");
+          }
+          function SDA() {
+               web.css("visibility", "hidden");
+               sda.css("visibility", "visible");
+               pe.css("visibility", "hidden");
+               os.css("visibility", "hidden");
+               tw.css("visibility", "hidden");
+               webbtn.css("border", "5px solid var(--color5)");
+               sdabtn.css("border", "5px solid var(--color3)");
+               pebtn.css("border", "5px solid var(--color5)");
+               osbtn.css("border", "5px solid var(--color5)");
+               twbtn.css("border", "5px solid var(--color5)");
+          }
+          function PE() {
+               web.css("visibility", "hidden");
+               sda.css("visibility", "hidden");
+               pe.css("visibility", "visible");
+               os.css("visibility", "hidden");
+               tw.css("visibility", "hidden");
+
+               webbtn.css("border", "5px solid var(--color5)");
+               sdabtn.css("border", "5px solid var(--color5)");
+               pebtn.css("border", "5px solid var(--color3)");
+               osbtn.css("border", "5px solid var(--color5)");
+               twbtn.css("border", "5px solid var(--color5)");
+          }
+          function OS() {
+               web.css("visibility", "hidden");
+               sda.css("visibility", "hidden");
+               pe.css("visibility", "hidden");
+               os.css("visibility", "visible");
+               tw.css("visibility", "hidden");
+
+               webbtn.css("border", "5px solid var(--color5)");
+               sdabtn.css("border", "5px solid var(--color5)");
+               pebtn.css("border", "5px solid var(--color5)");
+               osbtn.css("border", "5px solid var(--color3)");
+               twbtn.css("border", "5px solid var(--color5)");
+          }
+          function TW() {
+               web.css("visibility", "hidden");
+               sda.css("visibility", "hidden");
+               pe.css("visibility", "hidden");
+               os.css("visibility", "hidden");
+               tw.css("visibility", "visible");
+
+               webbtn.css("border", "5px solid var(--color5)");
+               sdabtn.css("border", "5px solid var(--color5)");
+               pebtn.css("border", "5px solid var(--color5)");
+               osbtn.css("border", "5px solid var(--color5)");
+               twbtn.css("border", "5px solid var(--color3)");
+          }
+
+          //-----------------for Pie Chart------------------
+          $(document).ready(function () {
+               $(function () {
+                    $(".pie-chart").easyPieChart({
+                         size: 150,
+                         barColor: "#8c391b",
+                         scaleColor: false,
+                         lineWidth: 10,
+                         trackColor: "#e19d82",
+
+                         animate: 1700,
+                    });
+               });
+          });
+     </script>
+</html>
+
+<!-- <div class="table-subject">
+     <button>Web Engineering</button>
+     <button>Software Design & Architecture</button>
+     <button>Professional Ethics</button>
+     <button>Operating System</button>
+     <button>Technical Writting</button>
+</div>
+<div class="attendance-table">
+     <table>
+          <tr>
+               <td>Sr no.</td>
+               <td>Date</td>
+               <td>Status</td>
+          </tr>
+          <tr>
+               <td>1</td>
+               <td>27-01-2022</td>
+               <td>P</td>
+          </tr>
+     </table>
+</div> -->
