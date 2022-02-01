@@ -12,5 +12,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idreesahmed1257/CMS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/idreesahmed1257/CMS/issues"
+  },
+  "homepage": "https://github.com/idreesahmed1257/CMS#readme",
   "description": ""
 }
