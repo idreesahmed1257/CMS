@@ -105,7 +105,7 @@ input[type="password"] {
 .loginBox > form > a {
      text-decoration: none;
      color: var(--color4);
-     margin-left: 30%;
+     margin-left: 32%;
      font-size: 14px;
 }
 .loginBox > form > a:hover {
