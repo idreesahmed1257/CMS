@@ -20,6 +20,8 @@ app.get('/first.html',(req,res)=>{
 //Rendering the Dashboard
 app.get('/Dashboard.html',(req,res)=>{
     res.sendFile(path.join(__dirname,'/Student/Dashboard.html'));
+    // res.sendFile(path.join(__dirname,'/Student/jquery.easypiechart.js'));
+    // res.sendFile(path.join(__dirname,'/Student/main.js'));
 });
 
 // Server listening on the port
