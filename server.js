@@ -13,8 +13,8 @@ app.get("/", (req, res) => {
 });
 
 //Rendering the login page
-app.get("/first.html", (req, res) => {
-     res.sendFile(path.join(__dirname, "/Student/first.html"));
+app.get("/login.html", (req, res) => {
+     res.sendFile(path.join(__dirname, "/Student/login.html"));
 });
 
 //Rendering the Dashboard
