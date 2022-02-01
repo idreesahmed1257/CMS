@@ -29,7 +29,30 @@ app.get('/attandence.html',(req,res)=>{
     res.sendFile(path.join(__dirname,'/Student/attandence.html'));
 });
 
+//Rendering the enrollment
+app.get('/Enrollment.html',(req,res)=>{
+    res.sendFile(path.join(__dirname,'/Student/Enrollment.html'));
+});
 
+//Rendering the fee
+app.get('/Fee.html',(req,res)=>{
+    res.sendFile(path.join(__dirname,'/Student/Fee.html'));
+});
+
+//Rendering the profile
+app.get('/profile.html',(req,res)=>{
+    res.sendFile(path.join(__dirname,'/Student/profile.html'));
+});
+
+//Rendering the results
+app.get('/results.html',(req,res)=>{
+    res.sendFile(path.join(__dirname,'/Student/results.html'));
+});
+
+//Rendering the subject
+app.get('/subject.html',(req,res)=>{
+    res.sendFile(path.join(__dirname,'/Student/subject.html'));
+});
 
 // Server listening on the port
 app.listen(port,()=>{
