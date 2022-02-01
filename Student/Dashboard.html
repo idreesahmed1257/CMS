@@ -246,29 +246,45 @@
                               <li> <span> 50% </span> </li>
                               <li> <span> 0 </span> </li>
                          </ul>
-
-                         <ul class="bars">
-                              <li>
-                                   <div class="bar" data-percentage="93"></div>
-                                   <span>October</span>
-                              </li>
-                              <li>
-                                   <div class="bar" data-percentage="88"></div>
-                                   <span>November</span>
-                              </li>
-                              <li>
-                                   <div class="bar" data-percentage="78"></div>
-                                   <span>December</span>
-                              </li>
-                              <li>
-                                   <div class="bar" data-percentage="100"></div>
-                                   <span>January</span>
-                              </li>
-                              <li>
-                                   <div class="bar" data-percentage="80"></div>
-                                   <span>Febrary</span>
-                              </li>
-                         </ul>
+                         <div class="bar-container">
+                              <ul class="bars">
+                                   <li>
+                                        <div
+                                             class="bar"
+                                             data-percentage="93"
+                                        ></div>
+                                        <span>October</span>
+                                   </li>
+                                   <li>
+                                        <div
+                                             class="bar"
+                                             data-percentage="88"
+                                        ></div>
+                                        <span>November</span>
+                                   </li>
+                                   <li>
+                                        <div
+                                             class="bar"
+                                             data-percentage="78"
+                                        ></div>
+                                        <span>December</span>
+                                   </li>
+                                   <li>
+                                        <div
+                                             class="bar"
+                                             data-percentage="100"
+                                        ></div>
+                                        <span>January</span>
+                                   </li>
+                                   <li>
+                                        <div
+                                             class="bar"
+                                             data-percentage="80"
+                                        ></div>
+                                        <span>Febrary</span>
+                                   </li>
+                              </ul>
+                         </div>
                     </div>
                     <div id="curve_chart"></div>
                </div>
@@ -327,6 +343,7 @@
           integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
           crossorigin="anonymous"
      ></script>
+     <!-- -------------------main.js-------------------->
      <script>
           //-----------------for Pie Chart------------------
           $(document).ready(function () {
@@ -418,7 +435,6 @@
                }
           });
      </script>
-     // ----------------------easyPieChart-----------------
      <script>
           /**!
            * easy-pie-chart

@@ -35,7 +35,7 @@ body {
                rgba(140, 57, 27, 0.5),
                rgba(64, 13, 1, 1)
           ),
-          url("/Images/aa.jpg");
+          url("/public/Images/adminback.jpg");
      background-size: cover;
      height: 100%;
      width: 100%;
@@ -431,6 +431,9 @@ input[type="password"] {
           rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
      border-radius: 20px;
      background-color: var(--color1);
+}
+.bar-container {
+     border: 2px solid black;
 }
 .bar-chart > h1 {
      text-align: center;
