@@ -154,7 +154,7 @@
                </div>
                <div class="subject">
                     <h1>Courses</h1>
-                    <div class="subject-container autoplay">
+                    <div class="subject-container">
                          <div class="Sub-div-1">
                               <a href="./subject.html" class="sub-anchor">
                                    <div class="subject-box">
@@ -211,19 +211,6 @@
                                         <h6>5th Semester(Fall 2021)</h6>
                                    </div>
                               </a>
-                              <a href="./subject.html" class="sub-anchor">
-                                   <div class="subject-box">
-                                        <img
-                                             src="/public/Images/SDA.png"
-                                             alt=""
-                                        />
-                                        <h3
-                                             >CS-421 Software Design &
-                                             Architecture</h3
-                                        >
-                                        <h6>5th Semester(Fall 2021)</h6>
-                                   </div>
-                              </a>
                          </div>
                     </div>
                </div>
@@ -240,14 +227,7 @@
                </div>
           </div>
      </body>
-     <script
-          type="text/javascript"
-          src="./slick-1.8.1/slick-1.8.1/slick/slick.min.js"
-     ></script>
-     <script
-          type="text/javascript"
-          src="./slick-1.8.1/slick-1.8.1/slick/slick.js"
-     ></script>
+
      <script>
           $(document).ready(function () {
                $(".autoplay").slick({
@@ -257,5 +237,12 @@
                     autoplaySpeed: 2000,
                });
           });
+
+          function add_subject() {
+               var sub_container = $(".Sub-div-2");
+               sub_container.append(
+                    '<a href="./subject.html" class="sub-anchor"><div class="subject-box"><img src="/public/Images/PE.png" alt="Web Picture"/><h3> HU-223 Professional Ethics</h3><h6>5th Semester(Fall 2021)</h6></div></a>'
+               );
+          }
      </script>
 </html>

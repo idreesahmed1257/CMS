@@ -25,17 +25,6 @@ $(function () {
      });
 });
 
-// ---------------------Slick JS--------------------------
-
-$(document).ready(function () {
-     $(".autoplay").slick({
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 2000,
-     });
-});
-
 var bell_Count = 0;
 function bell_icon() {
      if (bell_Count % 2 == 0) {

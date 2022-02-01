@@ -610,12 +610,15 @@ g {
      margin-bottom: 10px;
 }
 .social-icons > a > i {
-     color: var(--color5);
+     color: var(--color3);
      font-size: 40px;
      margin-right: 10px;
 }
-.social-icons > a > i :hover {
+/* .social-icons > a > i :hover {
      color: var(--color3);
+} */
+#icon-1 :hover {
+     color: brown;
 }
 
 .social-acconts > a {
@@ -861,6 +864,9 @@ g {
 }
 .fee-container h1 {
      text-align: center;
+}
+.fa-download {
+     color: black;
 }
 
 /* ------------------------------------Result-------------------*/
