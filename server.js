@@ -17,6 +17,11 @@ app.get('/first.html',(req,res)=>{
     res.sendFile(path.join(__dirname,'/Student/first.html'));
 });
 
+//Rendering the Dashboard
+app.get('/Dashboard.html',(req,res)=>{
+    res.sendFile(path.join(__dirname,'/Student/Dashboard.html'));
+});
+
 // Server listening on the port
 app.listen(port,()=>{
     console.log(`App running on port ${port}`);
