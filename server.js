@@ -8,6 +8,12 @@ const port = process.env.PORT || 5050;
 
 app.use(express.static(__dirname + "/public"));
 
+//Connection to the database
+mongoose.connect('mongodb://localhost:27017/CMS',{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
 // Routes
 //Rendering the login page
 app.get("/", (req, res) => {
