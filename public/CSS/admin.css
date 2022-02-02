@@ -133,6 +133,13 @@ input[type="password"] {
      min-height: 1605px;
 }
 
+.fa-bars {
+     color: var(--white);
+     font-size: 30px;
+     margin-left: 95%;
+     margin-top: 10px;
+}
+
 .page_container {
      float: left;
      width: 80%;
@@ -368,7 +375,7 @@ i[class^="icon-chevron"] {
 .celender-container {
      width: 20%;
      margin-right: 60px;
-     margin-top: 30px;
+     margin-top: 20px;
      float: right;
      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
           rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -389,6 +396,7 @@ i[class^="icon-chevron"] {
      background-color: var(--color1);
      width: 65%;
      padding: 30px;
+     float: left;
 }
 .table {
      width: 100%;
@@ -505,4 +513,32 @@ i[class^="icon-chevron"] {
      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
      vertical-align: top;
      border-top: 1px solid #dee2e6;
+}
+
+/* -----------------Notification----------- */
+.faculty-notification {
+     display: flex;
+     flex-direction: column;
+     float: right;
+     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+     border-radius: 20px;
+     background-color: var(--color1);
+     margin-top: 20px;
+     padding: 30px;
+     margin-right: 25px;
+     width: 220px;
+     height: 150px;
+     overflow: scroll;
+}
+.faculty-notification > div {
+     display: flex;
+     flex-direction: column;
+}
+.faculty-notification a {
+     text-decoration: none;
+     height: 40px;
+     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+     padding: 10px;
+     margin-bottom: 10px;
 }

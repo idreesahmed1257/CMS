@@ -709,7 +709,7 @@ g {
      width: 92%;
      margin: 20px;
      padding: 20px;
-     height: 500px;
+     /* height: 500px; */
      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
           rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
      border-radius: 20px;
@@ -739,16 +739,17 @@ g {
 }
 
 .table-container > table {
-     position: absolute;
+     width: 100%;
+     position: relative;
 }
 #customers {
      font-family: Arial, Helvetica, sans-serif;
      border-collapse: collapse;
-     width: 73%;
+     width: 100%;
      border-radius: 20px;
      font-weight: 20px;
      margin-top: 30px;
-     visibility: hidden;
+     /* visibility: hidden; */
 }
 /* .sda,
 .web {
