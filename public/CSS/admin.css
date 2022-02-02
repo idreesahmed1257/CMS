@@ -524,21 +524,52 @@ i[class^="icon-chevron"] {
           rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
      border-radius: 20px;
      background-color: var(--color1);
-     margin-top: 20px;
+     margin-top: 40px;
      padding: 30px;
      margin-right: 25px;
      width: 220px;
-     height: 150px;
-     overflow: scroll;
+     height: 100px;
+     /* overflow: scroll; */
 }
 .faculty-notification > div {
      display: flex;
      flex-direction: column;
 }
-.faculty-notification a {
+.faculty-notification > h3 {
+     text-align: center;
+     margin-top: 0;
+}
+.faculty-notification input {
      text-decoration: none;
-     height: 40px;
+     height: 80px;
+     margin-top: 10px;
+     border: none;
      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
      padding: 10px;
      margin-bottom: 10px;
+     border-radius: 20px;
+}
+.faculty-notification > button {
+     background-color: var(--color4);
+     color: var(--white);
+     font-weight: bolder;
+     padding: 10px;
+     border-radius: 20px;
+     border: none;
+}
+.faculty-notification > button:hover {
+     background-color: var(--color3);
+     transition: 0.5s;
+     cursor: pointer;
+}
+/* ---------------------Adm-Attandance-_____________*/
+.title-Adm-att h1 {
+     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+     border-radius: 20px;
+     background-color: var(--color1);
+     text-align: center;
+     width: 20%;
+     margin-left: 40%;
+     margin-top: 20px;
 }
