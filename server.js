@@ -121,6 +121,7 @@ app.get("/admin.html", (req, res) => {
 //     }
 // });
 
+// Login for the user
 app.post("/login", async (req, res) => {
     try {
       const mail = req.body.username;
