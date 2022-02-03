@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const Faculty = require('./faculty');
-const Attachment = require('./attandence');
+const Attacdence = require('./attandence');
 const console = require('console');
 
 const app = express();
@@ -200,9 +200,40 @@ app.get('/adm_dashboard.html',(req,res)=>{
     res.sendFile(path.join(__dirname, '/Admin/adm_dashboard.html')); 
 });
 
+//Rendering the faculty login page
+app.get('/faculty_login.html',(req,res)=>{
+    res.sendFile(path.join(__dirname, '/Admin/faculty_login.html'));
+});
+
+// login for the faculty 
+app.post("/faculty_login", async (req, res) => {
+    try {
+      const mail = req.body.username;
+      const password = req.body.password;
+      const findMail = await Faculty.findOne({
+        username: mail,
+      });
+  
+      if (findMail.password == password) {
+        res.json({ Verified: true, Username: mail });
+
+    } else {
+        res.send("Password are not matching");
+      }
+    } catch (err) {
+      console.log("error");
+    }
+  });
+
 //
 app.get("/getStudentDetails/:username", function (req, res) {
     User.findOne({ username: req.params.username })
+    .then(student => res.json(student));
+}
+);
+
+app.get("/getFacultyDetails/:username", function (req, res) {
+    Faculty.findOne({ username: req.params.username })
     .then(student => res.json(student));
 }
 );
