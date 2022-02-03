@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require('express');
 const path = require('path');
 const bcrypt = require('bcryptjs');
@@ -6,6 +7,12 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const console = require('console');
+=======
+const express = require("express");
+const path = require("path");
+const bcrypt = require("bcryptjs");
+const mongoose = require("mongoose");
+>>>>>>> 93f4aec497a361d3be43daa3ebbf18ca584cedb1
 const app = express();
 
 const JWT_Secret = 'I am long secret string';
@@ -16,9 +23,9 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
 //Connection to the database
-mongoose.connect('mongodb://localhost:27017/CMS',{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+mongoose.connect("mongodb://localhost:27017/CMS", {
+     useNewUrlParser: true,
+     useUnifiedTopology: true,
 });
 
 // Routes

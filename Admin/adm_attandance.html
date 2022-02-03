@@ -7,8 +7,9 @@
                name="viewport"
                content="width=device-width, initial-scale=1.0"
           />
-          <title>Dashboard</title>
+          <title>Adm_Attandance</title>
           <link rel="stylesheet" href="/public/CSS/style.css" />
+          <link rel="stylesheet" href="/public/CSS/admin.css" />
           <!-- ---------------Font-Awesome-------------------->
           <script
                src="https://kit.fontawesome.com/71580bc2e9.js"
@@ -38,7 +39,7 @@
                          <a href="./Dashboard.html"
                               ><img
                                    class="logo"
-                                   src="/public/Images/logofinal.png"
+                                   src="../Images/logofinal.png"
                                    alt=""
                               />
                               <h1 id="nav-title-h1">CIST</h1>
@@ -47,7 +48,7 @@
 
                     <span class="profile">
                          <a href="./profile.html">
-                              <img src="/public/Images/Man-avater.png" alt="" />
+                              <img src="../Images/Man-avater.png" alt="" />
                               <div>
                                    <p>Welcome</p>
                                    <h4>Idrees Ahmed</h4>
@@ -119,7 +120,7 @@
                                    </a>
                               </ul>
                          </i>
-                         <img src="/public/Images/Man-avater.png" alt="" />
+                         <img src="../Images/Man-avater.png" alt="" />
                          <h4>Idrees Ahmed</h4>
                          <i
                               class="fas fa-chevron-down"
@@ -145,7 +146,251 @@
                               </ul>
                          </i>
                     </div>
-               </div></div
-          ></body
-     ></html
->
+               </div>
+
+               <div class="title-Adm-att">
+                    <h1>Your Subjects</h1>
+               </div>
+               <div class="table-container">
+                    <div class="table-subject">
+                         <button onclick="WE()" id="web-btn"
+                              >Web Engineering</button
+                         >
+                         <button onclick="SDA()" id="sda-btn"
+                              >Software Design & Architecture</button
+                         >
+                         <button onclick="PE()" id="pe-btn"
+                              >Professional Ethics</button
+                         >
+                         <button onclick="OS()" id="os-btn"
+                              >Operating System</button
+                         >
+                         <button onclick="TW()" id="tw-btn"
+                              >Technical Writting</button
+                         >
+                    </div>
+                    <table id="customers" class="web">
+                         <tr class="table-row-1">
+                              <th>Name</th>
+                              <th>Status</th>
+                         </tr>
+                    </table>
+                    <button onclick="submit_attandence()"
+                         >Save Attandance</button
+                    >
+               </div>
+          </div>
+          <script>
+               var web_att = [
+                    {
+                         Name: "WEB",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+               ];
+               $(".table-container > table").html(
+                    `<tr class="table-row-1"><th>Name</th><th>Status</th></tr>`
+               );
+
+               for (var i = 0; i < web_att.length; i++) {
+                    var in_html = $(".web").html();
+                    $(".web").html(
+                         in_html +
+                              `<tr><td class = "student_names" >${web_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
+                    );
+               }
+               // let myRequest = new Request("/Student/database.json");
+               fetch("/Student/database.json")
+                    .then(function (resp) {
+                         return resp.json();
+                    })
+                    .then(function (data) {
+                         console.log(data);
+                    });
+
+               function submit_attandence() {
+                    var att_json_obj = [];
+                    var check_obj = [];
+                    var std_obj = [];
+                    var std_name = $(".student_names");
+                    var chk_name = $(".check_input");
+                    for (let i = 0; i < std_name.length; i++) {
+                         std_obj[i] = std_name[i].innerText;
+                         check_obj[i] = chk_name[i].value;
+                         var x = {
+                              Name: std_obj[i],
+                              status: check_obj[i],
+                         };
+                         att_json_obj.push(x);
+                    }
+                    console.log(att_json_obj);
+               }
+
+               // Web-Attandance-------------
+               function WE() {
+                    $(" .table-container > table").html(
+                         `<tr class="table-row-1"><th>Name</th><th>Status</th></tr>`
+                    );
+
+                    for (var i = 0; i < web_att.length; i++) {
+                         var in_html = $(".web").html();
+                         $(".web").html(
+                              in_html +
+                                   `<tr><td class = "student_names">${web_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
+                         );
+                    }
+               }
+               var sda_att = [
+                    {
+                         Name: "SDA",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+               ];
+               // SDA-Attendance---------------
+               function SDA() {
+                    $(" .table-container > table").html(
+                         `<tr class="table-row-1"><th>Name</th><th>Status</th></tr>`
+                    );
+
+                    for (var i = 0; i < sda_att.length; i++) {
+                         var in_html = $(".web").html();
+                         $(".web").html(
+                              in_html +
+                                   `<tr><td class = "student_names">${sda_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
+                         );
+                    }
+               }
+
+               var pe_att = [
+                    {
+                         Name: "PE",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+               ];
+               // SDA-Attendance---------------
+               function PE() {
+                    $(" .table-container > table").html(
+                         `<tr class="table-row-1"><th>Name</th><th>Status</th></tr>`
+                    );
+
+                    for (var i = 0; i < pe_att.length; i++) {
+                         var in_html = $(".web").html();
+                         $(".web").html(
+                              in_html +
+                                   `<tr><td class = "student_names">${pe_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
+                         );
+                    }
+               }
+
+               var os_att = [
+                    {
+                         Name: "OS",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+               ];
+               // SDA-Attendance---------------
+               function OS() {
+                    $(" .table-container > table").html(
+                         `<tr class="table-row-1"><th>Name</th><th>Status</th></tr>`
+                    );
+
+                    for (var i = 0; i < os_att.length; i++) {
+                         var in_html = $(".web").html();
+                         $(".web").html(
+                              in_html +
+                                   `<tr><td class = "student_names">${os_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
+                         );
+                    }
+               }
+               var tw_att = [
+                    {
+                         Name: "TW",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+                    {
+                         Name: "Idrees Ahmed",
+                    },
+               ];
+               // SDA-Attendance---------------
+               function TW() {
+                    $(" .table-container > table").html(
+                         `<tr class="table-row-1"><th>Name</th><th>Status</th></tr>`
+                    );
+
+                    for (var i = 0; i < tw_att.length; i++) {
+                         var in_html = $(".web").html();
+                         $(".web").html(
+                              in_html +
+                                   `<tr><td class = "student_names">${tw_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
+                         );
+                    }
+               }
+          </script>
+     </body>
+</html>

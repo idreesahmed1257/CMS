@@ -524,21 +524,128 @@ i[class^="icon-chevron"] {
           rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
      border-radius: 20px;
      background-color: var(--color1);
-     margin-top: 20px;
+     margin-top: 40px;
      padding: 30px;
      margin-right: 25px;
      width: 220px;
-     height: 150px;
-     overflow: scroll;
+     height: 100px;
+     /* overflow: scroll; */
 }
 .faculty-notification > div {
      display: flex;
      flex-direction: column;
 }
-.faculty-notification a {
+.faculty-notification > h3 {
+     text-align: center;
+     margin-top: 0;
+}
+.faculty-notification input {
      text-decoration: none;
-     height: 40px;
+     height: 80px;
+     margin-top: 10px;
+     border: none;
      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
      padding: 10px;
      margin-bottom: 10px;
+     border-radius: 20px;
+}
+.faculty-notification > button {
+     background-color: var(--color4);
+     color: var(--white);
+     font-weight: bolder;
+     padding: 10px;
+     border-radius: 20px;
+     border: none;
+}
+.faculty-notification > button:hover {
+     background-color: var(--color3);
+     transition: 0.5s;
+     cursor: pointer;
+}
+/* ---------------------Adm-Attandance-_____________*/
+.title-Adm-att h1 {
+     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+     border-radius: 20px;
+     background-color: var(--color1);
+     text-align: center;
+     width: 20%;
+     margin-left: 40%;
+     margin-top: 20px;
+}
+
+/* -----------------Adm-enroll-Student-------------*/
+.enroll-box {
+     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+     border-radius: 20px;
+     background-color: var(--color1);
+     width: 50%;
+     display: flex;
+     flex-direction: column;
+     margin-left: 20%;
+     align-items: left;
+     margin-top: 50px;
+     padding: 20px;
+}
+.enroll-inner-box {
+     display: flex;
+     flex-direction: column;
+     width: 50%;
+     margin-left: 30%;
+}
+.enroll-box h1 {
+     text-align: center;
+     height: 30px;
+     margin-bottom: 20px;
+}
+.enroll-box input {
+     margin-top: 10px;
+     border: none;
+     padding: 10px;
+}
+.enroll-box label {
+     margin-top: 10px;
+     height: 30px;
+     font-weight: bolder;
+}
+
+.enroll-box select {
+     margin-top: 10px;
+     /* height: 30px; */
+     border: none;
+     padding: 10px;
+}
+.enroll-box button {
+     background-color: var(--color4);
+     color: var(--white);
+     font-weight: bolder;
+     padding: 10px;
+     border-radius: 20px;
+     border: none;
+     margin-top: 20px;
+}
+#enroll:hover {
+     background-color: var(--color3);
+     cursor: pointer;
+     transition: 0.5s;
+}
+
+.table-container > button {
+     border: none;
+     height: 40px;
+     outline: none;
+     background: var(--color4);
+     color: var(--white);
+     padding-left: 10px;
+     padding-right: 10px;
+     font-size: medium;
+     font-weight: bold;
+     border-radius: 20px;
+     margin-left: 40%;
+}
+.table-container > button:hover {
+     background-color: var(--color3);
+     cursor: pointer;
+     transition: 0.5s;
 }
