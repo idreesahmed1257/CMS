@@ -74,7 +74,7 @@ app.get("/subject.html", (req, res) => {
      res.sendFile(path.join(__dirname, "/Student/subject.html"));
 });
 
-//Rendering the Admin-Add-Sunject
+//Rendering the Admin-Add-Subject
 app.get("/admin.html", (req, res) => {
      res.sendFile(path.join(__dirname, "/Student/admin.html"));
 });

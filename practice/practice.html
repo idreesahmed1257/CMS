@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Document</title>
+     </head>
+     <body>
+          <label for="">Enter Name</label>
+          <input type="text" id="name" />
+          <br />
+          <label for="">Enter Password</label>
+          <input type="text" name=""/ id="password">
+          <hr />
+          <button onclick="submit()">Submit form</button>
+     </body>
+     <script>
+          function submit() {
+               var empty_obj = [];
+               var S_name = $("#name");
+               var Pass = $("#password");
+               var x = {
+                    Std_name: S_name.val(),
+                    Std_Pass: Pass.val(),
+               };
+               empty_obj.push(x);
+               console.log(empty_obj);
+          }
+
+          const fs = require("./prac.json");
+
+          (() => {
+               console.log("wow");
+          })();
+          fs.writeFile("./pracc.json", JSON.stringify(empty_obj), (err) => {
+               if (err) {
+                    console.log("Error");
+               } else {
+                    console.log(empty_obj);
+               }
+          });
+     </script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</html>
