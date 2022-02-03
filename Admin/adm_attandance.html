@@ -175,6 +175,9 @@
                               <th>Status</th>
                          </tr>
                     </table>
+                    <button onclick="submit_attandence()"
+                         >Save Attandance</button
+                    >
                </div>
           </div>
           <script>
@@ -198,7 +201,7 @@
                          Name: "Idrees Ahmed",
                     },
                ];
-               $(" .table-container > table").html(
+               $(".table-container > table").html(
                     `<tr class="table-row-1"><th>Name</th><th>Status</th></tr>`
                );
 
@@ -206,9 +209,36 @@
                     var in_html = $(".web").html();
                     $(".web").html(
                          in_html +
-                              `<tr><td>${web_att[i].Name}</td><td><input type="checkbox" checked></td></tr>`
+                              `<tr><td class = "student_names" >${web_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
                     );
                }
+               // let myRequest = new Request("/Student/database.json");
+               fetch("/Student/database.json")
+                    .then(function (resp) {
+                         return resp.json();
+                    })
+                    .then(function (data) {
+                         console.log(data);
+                    });
+
+               function submit_attandence() {
+                    var att_json_obj = [];
+                    var check_obj = [];
+                    var std_obj = [];
+                    var std_name = $(".student_names");
+                    var chk_name = $(".check_input");
+                    for (let i = 0; i < std_name.length; i++) {
+                         std_obj[i] = std_name[i].innerText;
+                         check_obj[i] = chk_name[i].value;
+                         var x = {
+                              Name: std_obj[i],
+                              status: check_obj[i],
+                         };
+                         att_json_obj.push(x);
+                    }
+                    console.log(att_json_obj);
+               }
+
                // Web-Attandance-------------
                function WE() {
                     $(" .table-container > table").html(
@@ -219,7 +249,7 @@
                          var in_html = $(".web").html();
                          $(".web").html(
                               in_html +
-                                   `<tr><td>${web_att[i].Name}</td><td><input type="checkbox" checked></td></tr>`
+                                   `<tr><td class = "student_names">${web_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
                          );
                     }
                }
@@ -253,7 +283,7 @@
                          var in_html = $(".web").html();
                          $(".web").html(
                               in_html +
-                                   `<tr><td>${sda_att[i].Name}</td><td><input type="checkbox" checked></td></tr>`
+                                   `<tr><td class = "student_names">${sda_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
                          );
                     }
                }
@@ -288,7 +318,7 @@
                          var in_html = $(".web").html();
                          $(".web").html(
                               in_html +
-                                   `<tr><td>${pe_att[i].Name}</td><td><input type="checkbox" checked></td></tr>`
+                                   `<tr><td class = "student_names">${pe_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
                          );
                     }
                }
@@ -323,7 +353,7 @@
                          var in_html = $(".web").html();
                          $(".web").html(
                               in_html +
-                                   `<tr><td>${os_att[i].Name}</td><td><input type="checkbox" checked></td></tr>`
+                                   `<tr><td class = "student_names">${os_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
                          );
                     }
                }
@@ -357,7 +387,7 @@
                          var in_html = $(".web").html();
                          $(".web").html(
                               in_html +
-                                   `<tr><td>${tw_att[i].Name}</td><td><input type="checkbox" checked></td></tr>`
+                                   `<tr><td class = "student_names">${tw_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
                          );
                     }
                }

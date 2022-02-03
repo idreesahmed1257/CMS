@@ -151,22 +151,53 @@
                     <div class="enroll-inner-box">
                          <h1>Enroll Students</h1>
                          <label for="">Subject</label>
-                         <select name="subject-code" id="">
+                         <select name="subject-code" id="subject-menu">
                               <option value="">CSU - Web Engineering</option>
-                              <option value="">CSU - Web Engineering</option>
-                              <option value="">CSU - Web Engineering</option>
-                              <option value="">CSU - Web Engineering</option>
-                              <option value="">CSU - Web Engineering</option>
-                              <option value="">CSU - Web Engineering</option>
-                              <option value="">CSU - Web Engineering</option>
-                              <option value="">CSU - Web Engineering</option>
-                              <option value="">CSU - Web Engineering</option>
+                              <option value="">CSU - FOP</option>
+                              <option value="">CSU - Data Structure</option>
+                              <option value=""
+                                   >CSU - Discrete Mathematics</option
+                              >
+                              <option value="">CSU - TOA</option>
+                              <option value="">CSU - Database</option>
+                              <option value="">CSU - OS</option>
+                              <option value=""
+                                   >CSU - Proffessional Ethics</option
+                              >
+                              <option value="">CSU - TW</option>
                          </select>
                          <label for="">Student's Name</label>
-                         <input type="text" placeholder="Student's name" />
-                         <button id="enroll">Enroll</button>
+                         <input
+                              type="text"
+                              placeholder="Student's name"
+                              id="std-name"
+                         />
+                         <button id="enroll" onclick="enroll_student()"
+                              >Enroll</button
+                         >
                     </div>
                </div>
           </div>
      </body>
+     <script>
+          function enroll_student() {
+               var enroll_student = [];
+
+               var sub_menu = $("#subject-menu :selected").text();
+               var std_name = $("#std-name").val();
+
+               // enroll_student = std_name + ":" + sub_menu;
+               var y = {
+                    Name: std_name,
+                    Subject: sub_menu,
+               };
+               enroll_student.push(y);
+               console.log(enroll_student);
+               // console.log(sub_menu.text);
+          }
+          //           att_json_obj.push(x);
+          //      }
+          //      console.log(att_json_obj);
+          // }
+     </script>
 </html>

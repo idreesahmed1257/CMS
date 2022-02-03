@@ -630,3 +630,22 @@ i[class^="icon-chevron"] {
      cursor: pointer;
      transition: 0.5s;
 }
+
+.table-container > button {
+     border: none;
+     height: 40px;
+     outline: none;
+     background: var(--color4);
+     color: var(--white);
+     padding-left: 10px;
+     padding-right: 10px;
+     font-size: medium;
+     font-weight: bold;
+     border-radius: 20px;
+     margin-left: 40%;
+}
+.table-container > button:hover {
+     background-color: var(--color3);
+     cursor: pointer;
+     transition: 0.5s;
+}

@@ -1,7 +1,7 @@
-const express = require('express');
-const path = require('path');
-const bcrypt = require('bcryptjs');
-const mongoose = require('mongoose');
+const express = require("express");
+const path = require("path");
+const bcrypt = require("bcryptjs");
+const mongoose = require("mongoose");
 const app = express();
 
 const port = process.env.PORT || 5050;
@@ -9,9 +9,9 @@ const port = process.env.PORT || 5050;
 app.use(express.static(__dirname + "/public"));
 
 //Connection to the database
-mongoose.connect('mongodb://localhost:27017/CMS',{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+mongoose.connect("mongodb://localhost:27017/CMS", {
+     useNewUrlParser: true,
+     useUnifiedTopology: true,
 });
 
 // Routes
