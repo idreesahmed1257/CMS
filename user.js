@@ -6,6 +6,6 @@ const UserSchema = new mongoose.Schema({
 }, {collection: 'studentDirectory'});
 // we don't want our collection to be dynamic based on the name of the model
 
-const model = mongoose.model('UserSchema',UserSchema);
+const model = mongoose.model('studentDirectory',UserSchema);
 
 module.exports = model;

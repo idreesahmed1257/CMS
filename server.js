@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const express = require('express');
 const path = require('path');
 const bcrypt = require('bcryptjs');
@@ -7,12 +7,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const console = require('console');
-=======
-const express = require("express");
-const path = require("path");
-const bcrypt = require("bcryptjs");
-const mongoose = require("mongoose");
->>>>>>> 93f4aec497a361d3be43daa3ebbf18ca584cedb1
+
 const app = express();
 
 const JWT_Secret = 'I am long secret string';
@@ -20,6 +15,9 @@ const JWT_Secret = 'I am long secret string';
 const port = process.env.PORT || 5050;
 
 app.use(express.static(__dirname + "/public"));
+app.use(bodyParser.urlencoded({
+    extended: true
+}))
 app.use(bodyParser.json());
 
 //Connection to the database
@@ -101,24 +99,45 @@ app.get("/admin.html", (req, res) => {
 //  });
 
 // Login process
-app.post('/login', async (req,res)=>{
+// app.post('/login', (req,res)=>{
+//     try {
+//         console.log(req.body);
+//         const username1 = req.body.username;
+//         const password2 = req.body.password;
+//         console.log(username1 + " " + password2)
+
+//         const uname =  User.findOne({username:username1});
+//          console.log(uname);
+
+//         if(uname.password === password2){
+//             console.log("rendering ");
+//             res.sendFile(path.join(__dirname, "/Student/Dashboard.html"));
+//         }
+
+//         // console.log(`${username} and ${password}`);
+//     } catch (error) {
+//         res.status(400).send("Invalid user");
+//     }
+// });
+
+app.post("/login", async (req, res) => {
     try {
-        // console.log(req.body);
-        const username = req.body.username;
-        const password = req.body.password;
-
-        const uname = await User.findOne({username:username});
-
-        if(uname.password === password){
-            console.log("rendering ");
-            res.redirect(path.join(__dirname, "./Student/Dashboard.html"));
-        }
-
-        // console.log(`${username} and ${password}`);
-    } catch (error) {
-        res.status(400).send("Invalid user");
+      const mail = req.body.username;
+      const password = req.body.password;
+      const findMail = await User.findOne({
+        username: mail,
+      });
+  
+      if (findMail.password == password) {
+        // res.json({ Verified: true, UserID: findMail.userID });
+        res.sendFile(path.join(__dirname + '/Student/Dashboard.html'));
+      } else {
+        res.send("Password are not matching");
+      }
+    } catch (err) {
+      console.log("error");
     }
-});
+  });
 
 // Registring the Student
 app.post('/admin/register', async (req,res)=>{
