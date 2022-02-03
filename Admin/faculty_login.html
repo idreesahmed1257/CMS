@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Admin Add-Student</title>
+          <link rel="stylesheet" href="../CSS/style.css" />
+          <link rel="icon" type="image/x-icon" href="./Images/logofinal.png" />
+     </head>
+     <body>
+          <!-- <div class="admin-img-container"> -->
+               <div class="main-cover" id="main-cover">
+                    <div class="titlename">
+                         <img
+                              id="main-logo"
+                              src="../Images/logofinal.png"
+                              alt=""
+                         />
+                         <h1 id="heading1">CIST</h1>
+                    </div>
+                    <div class="loginBox" id="log-Box" style="height: 390px;">
+                         <img
+                              class="logo loginlogo"
+                              src="../Images/logofinal.png"
+                              alt=""
+                         />
+                         <h1>Add Student</h1>
+                         <form action="" id="reg">
+                              <label for="Username">Username</label>
+                              <input
+                                   type="text"
+                                   name=""
+                                   placeholder="Enter Username"
+                                   id="username"
+                                   required
+                              /><br /><br />
+                              <label for="password">Password</label>
+                              <input
+                                   type="password"
+                                   name=""
+                                   placeholder="Enter Password"
+                                   id="password"
+                                   required
+                              />
+                              <br /><br />
+                              <input
+                                   type="submit"
+                                   name=""
+                                   value="Add Student"
+                                   id="demo"
+                              /><br /><br />
+                              <!-- <a href="#forgot">Forgot Password</a><br />
+                              <input type="radio" />
+                              <label for="remember">Remember Me</label> -->
+                         </form>
+                    </div>
+               </div>
+          </div>
+          <script>
+              const form = document.getElementById('reg');
+              form.addEventListener('submit',regStudent);
+
+              async function regStudent(event){
+                  event.preventDefault();
+                  const username = document.getElementById("username").value;
+                  const password = document.getElementById("password").value;
+            
+                  const result =  await fetch('/admin/register',{
+                         method:'POST',
+                         headers:{
+                                  'Content-Type': 'application/json'
+                         },
+                          body: JSON.stringify({
+                                   username,
+                                   password
+                         })
+                    }).then((res) => res.json());
+                    // console.log(result);
+                    if(result.status === 'ok' ){
+                         // Everything fine
+                         alert("Registration successful");
+                    } else{
+                         // alert("Something went wrong");
+                         alert(result.error);
+                    }
+               }
+          </script>
+     </body>
+</html>

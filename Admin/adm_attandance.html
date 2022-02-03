@@ -181,6 +181,7 @@
                </div>
           </div>
           <script>
+               var subject_local = "";
                var web_att = [
                     {
                          Name: "WEB",
@@ -213,18 +214,18 @@
                     );
                }
                // let myRequest = new Request("/Student/database.json");
-               fetch("/Student/database.json")
-                    .then(function (resp) {
-                         return resp.json();
-                    })
-                    .then(function (data) {
-                         console.log(data);
-                    });
-
+               // fetch("/Student/database.json")
+               //      .then(function (resp) {
+               //           return resp.json();
+               //      })
+               //      .then(function (data) {
+               //           console.log(data);
+               //      });
                function submit_attandence() {
                     var att_json_obj = [];
                     var check_obj = [];
                     var std_obj = [];
+                    var date = new Date();
                     var std_name = $(".student_names");
                     var chk_name = $(".check_input");
                     for (let i = 0; i < std_name.length; i++) {
@@ -233,12 +234,13 @@
                          var x = {
                               Name: std_obj[i],
                               status: check_obj[i],
+                              course: subject_local,
+                              Date: date,
                          };
                          att_json_obj.push(x);
                     }
                     console.log(att_json_obj);
                }
-
                // Web-Attandance-------------
                function WE() {
                     $(" .table-container > table").html(
@@ -252,7 +254,9 @@
                                    `<tr><td class = "student_names">${web_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
                          );
                     }
+                    subject_local = "web";
                }
+
                var sda_att = [
                     {
                          Name: "SDA",
@@ -286,6 +290,7 @@
                                    `<tr><td class = "student_names">${sda_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
                          );
                     }
+                    subject_local = "sda";
                }
 
                var pe_att = [
@@ -321,6 +326,7 @@
                                    `<tr><td class = "student_names">${pe_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
                          );
                     }
+                    subject_local = "pe";
                }
 
                var os_att = [
@@ -356,6 +362,7 @@
                                    `<tr><td class = "student_names">${os_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
                          );
                     }
+                    subject_local = "os";
                }
                var tw_att = [
                     {
@@ -390,6 +397,7 @@
                                    `<tr><td class = "student_names">${tw_att[i].Name}</td><td><input class="check_input" value="P" type="text"></td></tr>`
                          );
                     }
+                    subject_local = "tw";
                }
           </script>
      </body>

@@ -14,11 +14,7 @@
                src="https://kit.fontawesome.com/71580bc2e9.js"
                crossorigin="anonymous"
           ></script>
-          <link
-               rel="icon"
-               type="image/x-icon"
-               href="../Images/logofinal.png"
-          />
+          <link rel="icon" type="image/x-icon" href="../Images/logofinal.png" />
 
           <!-- ----------------Jquery----------------------->
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -38,11 +34,14 @@
           <script>
                const username = localStorage.getItem("username");
                $(document).ready(function () {
-                    $.get("http://localhost:5050/getStudentDetails/" + username, function (data, status) {
-                         console.log(data);
-                         $("#sname").html(data.username);
-                         $("#sname1").html(data.username);
-                    });
+                    $.get(
+                         "http://localhost:5050/getStudentDetails/" + username,
+                         function (data, status) {
+                              console.log(data);
+                              $("#sname").html(data.username);
+                              $("#sname1").html(data.username);
+                         }
+                    );
                });
           </script>
      </head>
@@ -168,30 +167,21 @@
                          <div class="Sub-div-1">
                               <a href="./subject.html" class="sub-anchor">
                                    <div class="subject-box">
-                                        <img
-                                             src="../Images/WE.png"
-                                             alt=""
-                                        />
+                                        <img src="../Images/WE.png" alt="" />
                                         <h3>CS-330 Web Engineering</h3>
                                         <h6>5th Semester(Fall 2021)</h6>
                                    </div>
                               </a>
                               <a href="./subject.html" class="sub-anchor">
                                    <div class="subject-box">
-                                        <img
-                                             src="../Images/TW.png"
-                                             alt=""
-                                        />
+                                        <img src="../Images/TW.png" alt="" />
                                         <h3>HU-331 Technical Writting</h3>
                                         <h6>5th Semester(Fall 2021)</h6>
                                    </div>
                               </a>
                               <a href="./subject.html" class="sub-anchor">
                                    <div class="subject-box">
-                                        <img
-                                             src="../Images/SDA.png"
-                                             alt=""
-                                        />
+                                        <img src="../Images/SDA.png" alt="" />
                                         <h3
                                              >CS-421 Software Design &
                                              Architecture</h3
@@ -203,20 +193,14 @@
                          <div class="Sub-div-2">
                               <a href="./subject.html" class="sub-anchor">
                                    <div class="subject-box">
-                                        <img
-                                             src="../Images/OS.png"
-                                             alt=""
-                                        />
+                                        <img src="../Images/OS.png" alt="" />
                                         <h3>CS-103 Operating System</h3>
                                         <h6>5th Semester(Fall 2021)</h6>
                                    </div>
                               </a>
                               <a href="./subject.html" class="sub-anchor">
                                    <div class="subject-box">
-                                        <img
-                                             src="../Images/PE.png"
-                                             alt=""
-                                        />
+                                        <img src="../Images/PE.png" alt="" />
                                         <h3>HU-223 Professional Ethics</h3>
                                         <h6>5th Semester(Fall 2021)</h6>
                                    </div>
@@ -239,15 +223,6 @@
      </body>
 
      <script>
-          $(document).ready(function () {
-               $(".autoplay").slick({
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    autoplay: true,
-                    autoplaySpeed: 2000,
-               });
-          });
-
           function add_subject() {
                var sub_container = $(".Sub-div-2");
                sub_container.append(
