@@ -24,19 +24,21 @@
                          alt=""
                     />
                     <h1>Login here</h1>
-                    <form action="./Dashboard.html">
+                    <form action="/login" method="POST" id="login" >
                          <label for="Username">Username</label>
                          <input
                               type="text"
-                              name=""
+                              name="username"
                               placeholder="Enter Username"
+                              id="username"
                               required
                          /><br /><br />
                          <label for="password">Password</label>
                          <input
                               type="password"
-                              name=""
+                              name="password"
                               placeholder="Enter Password"
+                              id="password"
                               required
                          />
                          <br /><br />
@@ -62,6 +64,35 @@
                     xhttp.open("GET", "./Dashboard.html", true);
                     xhttp.send();
                }
-          </script>
+               const form = document.getElementById("login");
+               form.addEventListener("submit",login);
+
+          //      async function login(event){
+          //      //     event.preventDefault();
+          //          const username = document.getElementById("username").value;
+          //          const password = document.getElementById("password").value;
+
+            
+          //          const result =  await fetch('/login',{
+          //                method:'POST',
+          //                headers:{
+          //                     'Content-Type': 'application/json'
+          //                },
+          //                body: JSON.stringify({
+          //                     username,
+          //                     password
+          //                })
+          //           }).then((res) => res.json());
+          //           // console.log(result);
+          //           if(result.status === 'ok' ){
+          //           // Everything fine
+          //           console.log("Got the token: ",result.data);
+          //           // alert("Registration successful");
+          //           } else{
+          //           // alert("Something went wrong");
+          //           alert(result.error);
+          //           }
+          //      }
+          // </script>
      </body>
 </html>
