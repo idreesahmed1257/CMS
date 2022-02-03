@@ -205,6 +205,11 @@ app.get('/faculty_login.html',(req,res)=>{
     res.sendFile(path.join(__dirname, '/Admin/faculty_login.html'));
 });
 
+//Rendering faculty enter page
+app.get('/Enter_result.html',(req,res)=>{
+    res.sendFile(path.join(__dirname, '/Admin/Enter_result.html'));
+});
+
 // login for the faculty 
 app.post("/faculty_login", async (req, res) => {
     try {
