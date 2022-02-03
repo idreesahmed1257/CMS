@@ -5,7 +5,6 @@ const UserSchema = new mongoose.Schema({
     password: {type: String, required: true},
     date:{type: Date, required: true}, 
     course: {type: String, required: true}
-    
 }, {collection: 'attandence'});
 // we don't want our collection to be dynamic based on the name of the model
 

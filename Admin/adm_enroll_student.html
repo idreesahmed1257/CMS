@@ -30,6 +30,16 @@
                href="https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap"
                rel="stylesheet"
           />
+          <script>
+               const username = localStorage.getItem("username");
+               $(document).ready(function () {
+                    $.get("http://localhost:5050/getFacultyDetails/" + username, function (data, status) {
+                         console.log(data);
+                         $("#fname").html(data.username);
+                         $("#fname1").html(data.username);
+                    });
+               });
+          </script>
      </head>
      <body>
           <!-- -----------------------The Side Bar------------------------------------->
@@ -51,7 +61,7 @@
                               <img src="../Images/Man-avater.png" alt="" />
                               <div>
                                    <p>Welcome</p>
-                                   <h4>Idrees Ahmed</h4>
+                                   <h4 id="fname"></h4>
                               </div>
                          </a>
                     </span>
@@ -112,7 +122,7 @@
                               </ul>
                          </i>
                          <img src="../Images/Man-avater.png" alt="" />
-                         <h4>Idrees Ahmed</h4>
+                         <h4 id="fname1"></h4>
                          <i
                               class="fas fa-chevron-down"
                               onclick="meni_icon()"

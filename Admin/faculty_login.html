@@ -99,7 +99,7 @@
                     const username = $("#username").val();
                     const password = $("#password").val();
                     $.post(
-                         "http://localhost:5050/login/",
+                         "http://localhost:5050/faculty_login/",
                          { username: username, password: password },
                          function (data) {
                               if (data.Verified) {
@@ -107,7 +107,7 @@
                                         "username",
                                         data.Username
                                    );
-                                   window.location.replace("./Dashboard.html");
+                                   window.location.replace("./adm_dashboard.html");
                               }
                          }
                     );
