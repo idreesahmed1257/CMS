@@ -10,6 +10,7 @@
           <title>Login Page</title>
           <link rel="stylesheet" href="../CSS/style.css" />
           <link rel="icon" type="image/x-icon" href="./Images/logofinal.png" />
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      </head>
      <body>
           <div class="main-cover" id="main-cover1">
@@ -24,7 +25,7 @@
                          alt=""
                     />
                     <h1>Login here</h1>
-                    <form action="/login" method="POST" id="login" >
+                    <form id="login" onsubmit="submitform(event)" >
                          <label for="Username">Username</label>
                          <input
                               type="text"
@@ -64,8 +65,8 @@
                     xhttp.open("GET", "./Dashboard.html", true);
                     xhttp.send();
                }
-               const form = document.getElementById("login");
-               form.addEventListener("submit",login);
+               // const form = document.getElementById("login");
+               // form.addEventListener("submit",login);
 
           //      async function login(event){
           //      //     event.preventDefault();
@@ -93,6 +94,17 @@
           //           alert(result.error);
           //           }
           //      }
-          // </script>
+          function submitform(e){
+               e.preventDefault();
+               const username = $("#username").val();
+               const password = $("#password").val();
+               $.post("http://localhost:5050/login/", {username: username, password: password}, function(data){
+               if (data.Verified) {
+                    localStorage.setItem("username", data.Username);
+                    window.location.replace("./Dashboard.html")
+                  }
+              })
+          }
+          </script>
      </body>
 </html>

@@ -129,9 +129,9 @@ app.post("/login", async (req, res) => {
       });
   
       if (findMail.password == password) {
-        // res.json({ Verified: true, UserID: findMail.userID });
-        res.sendFile(path.join(__dirname + '/Student/Dashboard.html'));
-      } else {
+        res.json({ Verified: true, Username: mail });
+
+    } else {
         res.send("Password are not matching");
       }
     } catch (err) {
@@ -182,6 +182,12 @@ app.post('/admin/register', async (req,res)=>{
     // It will automatically set the headers instead of manually setting them
     res.json({status: 'ok'});
  });
+
+app.get("/getStudentDetails/:username", function (req, res) {
+    User.findOne({ username: req.params.username })
+    .then(student => res.json(student));
+}
+);
 
 // Server listening on the port
 app.listen(port, () => {
