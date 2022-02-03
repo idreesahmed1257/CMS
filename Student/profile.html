@@ -35,6 +35,17 @@
                href="https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap"
                rel="stylesheet"
           />
+          <script>
+               const username = localStorage.getItem("username");
+               $(document).ready(function () {
+                    $.get("http://localhost:5050/getStudentDetails/" + username, function (data, status) {
+                         console.log(data);
+                         $("#sname").html(data.username);
+                         $("#sname1").html(data.username);
+                         $("#sname2").html(data.username);
+                    });
+               });
+          </script>
      </head>
      <body>
           <!-- -----------------------The Side Bar------------------------------------->
@@ -56,7 +67,7 @@
                               <img src="../Images/Man-avater.png" alt="" />
                               <div>
                                    <p>Welcome</p>
-                                   <h4>Idrees Ahmed</h4>
+                                   <h4 id="sname"></h4>
                               </div>
                          </a>
                     </span>
@@ -126,7 +137,7 @@
                               </ul>
                          </i>
                          <img src="../Images/Man-avater.png" alt="" />
-                         <h4>Idrees Ahmed</h4>
+                         <h4 id="sname1">Idrees Ahmed</h4>
                          <i
                               class="fas fa-chevron-down"
                               onclick="meni_icon()"
@@ -156,7 +167,7 @@
                     <div class="picture-container">
                          <img src="../Images/Man-avater.png" alt="" />
                          <div class="line"></div>
-                         <h2>Idrees Ahmed</h2>
+                         <h2 id="sname2"></h2>
                          <div class="cms-id">
                               <h4>CMS ID: </h4>
                               <p>233454</p>
