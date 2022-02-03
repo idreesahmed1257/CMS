@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Faculty Login</title>
+          <link rel="stylesheet" href="../CSS/style.css" />
+          <link rel="icon" type="image/x-icon" href="./Images/logofinal.png" />
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     </head>
+     <body>
+          <div class="main-cover" id="main-cover1">
+               <h1 style="color: white; font-size: 50px">Faculty Login</h1>
+               <div class="titlename">
+                    <img id="main-logo" src="./Images/logofinal.png" alt="" />
+                    <h1 id="heading1">CIST</h1>
+               </div>
+               <div class="loginBox">
+                    <img
+                         class="logo loginlogo"
+                         src="/Images/logofinal.png"
+                         alt=""
+                    />
+                    <h1>Login here</h1>
+                    <form id="login" onsubmit="submitform(event)">
+                         <label for="Username">Username</label>
+                         <input
+                              type="text"
+                              name="username"
+                              placeholder="Enter Username"
+                              id="username"
+                              required
+                         /><br /><br />
+                         <label for="password">Password</label>
+                         <input
+                              type="password"
+                              name="password"
+                              placeholder="Enter Password"
+                              id="password"
+                              required
+                         />
+                         <br /><br />
+                         <input
+                              type="submit"
+                              name=""
+                              value="Login"
+                              id="demo"
+                         /><br /><br />
+                         <a href="#forgot">Forgot Password</a><br />
+                         <input type="radio" />
+                         <label for="remember">Remember Me</label>
+                    </form>
+               </div>
+          </div>
+          <script>
+               function loadDoc() {
+                    const xhttp = new XMLHttpRequest();
+                    xhttp.onload = function () {
+                         document.getElementById("sample").innerHTML =
+                              this.responseText;
+                    };
+                    xhttp.open("GET", "./Dashboard.html", true);
+                    xhttp.send();
+               }
+               // const form = document.getElementById("login");
+               // form.addEventListener("submit",login);
+
+               //      async function login(event){
+               //      //     event.preventDefault();
+               //          const username = document.getElementById("username").value;
+               //          const password = document.getElementById("password").value;
+
+               //          const result =  await fetch('/login',{
+               //                method:'POST',
+               //                headers:{
+               //                     'Content-Type': 'application/json'
+               //                },
+               //                body: JSON.stringify({
+               //                     username,
+               //                     password
+               //                })
+               //           }).then((res) => res.json());
+               //           // console.log(result);
+               //           if(result.status === 'ok' ){
+               //           // Everything fine
+               //           console.log("Got the token: ",result.data);
+               //           // alert("Registration successful");
+               //           } else{
+               //           // alert("Something went wrong");
+               //           alert(result.error);
+               //           }
+               //      }
+               function submitform(e) {
+                    e.preventDefault();
+                    const username = $("#username").val();
+                    const password = $("#password").val();
+                    $.post(
+                         "http://localhost:5050/login/",
+                         { username: username, password: password },
+                         function (data) {
+                              if (data.Verified) {
+                                   localStorage.setItem(
+                                        "username",
+                                        data.Username
+                                   );
+                                   window.location.replace("./Dashboard.html");
+                              }
+                         }
+                    );
+               }
+          </script>
+     </body>
+</html>
