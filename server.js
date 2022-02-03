@@ -1,4 +1,3 @@
-
 const express = require('express');
 const path = require('path');
 const bcrypt = require('bcryptjs');
@@ -6,6 +5,8 @@ const User = require('./user');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
+const Faculty = require('./faculty');
+const Attachment = require('./attandence');
 const console = require('console');
 
 const app = express();
@@ -183,6 +184,22 @@ app.post('/admin/register', async (req,res)=>{
     res.json({status: 'ok'});
  });
 
+//Rendering the Admin attandence
+app.get('/adm_attandance.html',(req,res)=>{
+    res.sendFile(path.join(__dirname, '/Admin/adm_attandance.html')); 
+});
+
+//Rendering the Admin Enroll Student
+app.get('/adm_enroll_student.html',(req,res)=>{
+    res.sendFile(path.join(__dirname, '/Admin/adm_enroll_student.html')); 
+});
+
+//Rendering the Admin Dashboard
+app.get('/adm_dashboard.html',(req,res)=>{
+    res.sendFile(path.join(__dirname, '/Admin/adm_dashboard.html')); 
+});
+
+//
 app.get("/getStudentDetails/:username", function (req, res) {
     User.findOne({ username: req.params.username })
     .then(student => res.json(student));
