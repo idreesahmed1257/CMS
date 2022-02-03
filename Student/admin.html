@@ -29,12 +29,13 @@
                               alt=""
                          />
                          <h1>Add Student</h1>
-                         <form action="./Dashboard.html">
+                         <form action="" id="reg">
                               <label for="Username">Username</label>
                               <input
                                    type="text"
                                    name=""
                                    placeholder="Enter Username"
+                                   id="username"
                                    required
                               /><br /><br />
                               <label for="password">Password</label>
@@ -42,6 +43,7 @@
                                    type="password"
                                    name=""
                                    placeholder="Enter Password"
+                                   id="password"
                                    required
                               />
                               <br /><br />
@@ -58,5 +60,34 @@
                     </div>
                </div>
           </div>
+          <script>
+              const form = document.getElementById('reg');
+              form.addEventListener('submit',regStudent);
+
+              async function regStudent(event){
+                  event.preventDefault();
+                  const username = document.getElementById("username").value;
+                  const password = document.getElementById("password").value;
+            
+                  const result =  await fetch('/admin/register',{
+                         method:'POST',
+                         headers:{
+                                  'Content-Type': 'application/json'
+                         },
+                          body: JSON.stringify({
+                                   username,
+                                   password
+                         })
+                    }).then((res) => res.json());
+                    // console.log(result);
+                    if(result.status === 'ok' ){
+                         // Everything fine
+                         alert("Registration successful");
+                    } else{
+                         // alert("Something went wrong");
+                         alert(result.error);
+                    }
+               }
+          </script>
      </body>
 </html>
