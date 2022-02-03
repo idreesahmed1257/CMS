@@ -125,7 +125,10 @@ input[type="password"] {
 }
 
 /* -------------------------------Dashboard-------------------------*/
-
+#dashboard-navbar {
+     max-height: 1000px;
+     min-height: 1830px;
+}
 .navbar-box {
      float: left;
      width: 20%;
@@ -426,6 +429,7 @@ input[type="password"] {
      padding-right: 10px;
      padding-bottom: 150px;
      margin: auto 40px;
+     top: -1000px;
      width: 46%;
      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
           rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -454,14 +458,14 @@ input[type="password"] {
 .numbers li {
      list-style: none;
      height: 100px;
-     position: relative;
+     /* position: relative; */
      bottom: 100px;
 }
 
 .numbers span {
      font-size: 12px;
      font-weight: 600;
-     position: absolute;
+     /* position: absolute; */
      bottom: 0;
      right: 10px;
 }
@@ -498,9 +502,8 @@ input[type="password"] {
      display: block;
      background: var(--color3);
      width: 50px;
-
      position: absolute;
-     bottom: 0;
+     bottom: -15px;
      margin-left: 25px;
      text-align: center;
      box-shadow: 0 0 10px 0 rgba(64, 13, 1, 0.5);
@@ -531,6 +534,7 @@ input[type="password"] {
 
 .row3 {
      display: flex;
+     flex-direction: row;
      margin-bottom: 40px;
 }
 
@@ -872,7 +876,10 @@ g {
 .fa-download {
      color: black;
 }
-
+#result-nav {
+     max-height: 200px !important;
+     min-height: 750px;
+}
 /* ------------------------------------Result-------------------*/
 .result-table {
      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
@@ -894,6 +901,10 @@ g {
      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
           rgba(0, 0, 0, 0.3) 0px 3px 7px -3px !important;
      border-radius: 20px;
+}
+#result-navbar {
+     max-height: 700px;
+     min-height: 1000px !important;
 }
 .row-2 {
      display: flex;
@@ -1050,7 +1061,7 @@ g {
 /* -----------------------Admin-Add-Student------------------- */
 /* Above clases used as login page */
 #log-Box {
-     height: 300px !important;
+     height: 400px !important;
 }
 #main-cover {
      top: 0;
