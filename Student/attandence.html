@@ -42,22 +42,24 @@
                });
                const name = localStorage.getItem("name");
                const course = localStorage.getItem("course");
+               
                $(document).ready(function () {
                     $.get("http://localhost:5050/getStudentAttandence/" + name + "/" + course, function (data, status) {
                          console.log(data);
                          // $("#sname").html(data.username);
                          // $("#sname1").html(data.username);
+                         console.log(data.name);
                     $(" .table-container > table").html(
                     `<tr class="table-row-1"><th>Date</th><th>Status</th></tr>`
-               );
+                    );
 
                // for (var i = 0; i < webb.length; i++) {
                //      var in_html = $(".web").html();
-                    $(".web").html(`<tr><td>${data.name}</td><td>${data.course}</td></tr>`
+                    $(".web").html(`<tr><td>${data.name}</td><td>${data.course}</td></tr>`);
                     // );
                // }
                     // });
-               // });
+                });
           </script>
      </head>
      <body>
@@ -211,7 +213,7 @@
 
                <div class="table-container">
                     <div class="table-subject">
-                         <button onclick="WE();Web(event)" id="web-btn"
+                         <button onclick="Web(event)" id="web-btn"
                               >Web Engineering</button
                          >
                          <button onclick="SDA()" id="sda-btn"
@@ -241,7 +243,7 @@
      <script src="./jquery.easypiechart.js"></script>
 
      <script>
-          // ____________________________JASON OBJECTS_______________
+        
           var webb = [
                {
                     Sr_No: "1",
@@ -270,136 +272,10 @@
                },
           ];
 
-          // var sdaa = [
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2022",
-          //           stutus: "SDA",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2022",
-          //           stutus: "P",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2022",
-          //           stutus: "P",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2022",
-          //           stutus: "P",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2012",
-          //           stutus: "P",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2022",
-          //           stutus: "P",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2012",
-          //           stutus: "P",
-          //      },
-          // ];
-
-          // var oss = [
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2022",
-          //           stutus: "OS",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2022",
-          //           stutus: "P",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2022",
-          //           stutus: "P",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2022",
-          //           stutus: "P",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2012",
-          //           stutus: "P",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2022",
-          //           stutus: "P",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2012",
-          //           stutus: "P",
-          //      },
-          // ];
-          // var tww = [
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2022",
-          //           stutus: "TW",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2022",
-          //           stutus: "P",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2022",
-          //           stutus: "P",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2022",
-          //           stutus: "P",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2012",
-          //           stutus: "P",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2022",
-          //           stutus: "P",
-          //      },
-          //      {
-          //           Sr_No: "1",
-          //           date: "20-02-2012",
-          //           stutus: "P",
-          //      },
-          // ];
-
-          // ----------Web-Dynamic Table--------------
+       
+         
           
-          // var web = $(".web");
-          // function WE() {
-          //      $(" .table-container > table").html(
-          //           `<tr class="table-row-1"><th>Sr no.</th><th>Date</th><th>Status</th></tr>`
-          //      );
-
-          //      for (var i = 0; i < webb.length; i++) {
-          //           var in_html = $(".web").html();
-          //           $(".web").html(
-          //                in_html +
-          //                     `<tr><td>${webb[i].Sr_No}</td><td>${webb[i].date}</td><td>${webb[i].stutus}</td></tr>`
-          //           );
-          //      }
-          // }
-          // ---------SDA-----------------
+         
           var sda = $(".sda");
           function SDA() {
                $(" .table-container > table").html(
@@ -954,29 +830,7 @@
                     localStorage.setItem("course", data.course);
                     window.location.replace("./attandence.html");
                   } 
-              })
+              });
           }
      </script>
-     <!--<div class="table-subject">
-          <button>Web Engineering</button>
-          <button>Software Design & Architecture</button>
-          <button>Professional Ethics</button>
-          <button>Operating System</button>
-          <button>Technical Writting</button>
-     </div>
-     <div class="attendance-table">
-          <table>
-               <tr>
-                    <td>Sr no.</td>
-                    <td>Date</td>
-                    <td>Status</td>
-               </tr>
-               <tr>
-                    <td>1</td>
-                    <td>27-01-2022</td>
-                    <td>P</td>
-               </tr>
-          </table>
-     </div>-->
-</html>
-
+</html>        
