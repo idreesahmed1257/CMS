@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const Faculty = require('./faculty');
-const Attacdence = require('./attandence');
+const Attandence = require('./attandence');
 const console = require('console');
 
 const app = express();
@@ -230,18 +230,45 @@ app.post("/faculty_login", async (req, res) => {
     }
   });
 
-//
+//Setting the username
 app.get("/getStudentDetails/:username", function (req, res) {
     User.findOne({ username: req.params.username })
     .then(student => res.json(student));
 }
 );
 
+//Setting the email of faculty
 app.get("/getFacultyDetails/:username", function (req, res) {
     Faculty.findOne({ username: req.params.username })
     .then(student => res.json(student));
 }
 );
+
+//Getting student attandence
+app.get('/getStudentAttandence/:name/:course',(req,res) => {
+    Attacdence.find({ name: req.params.name, course:req.params.course})
+    .then(student=> res.json(student));
+});
+
+//To take attandence from the database
+app.post("/attandence", async (req, res) => {
+    try {
+      const name = req.body.name;
+      const course = req.body.course;
+      const findAttandence = await Attandence.find({
+        name: name,
+      });
+  
+      if (findAttandence.name == name || findAttandence.course == course) {
+        res.json({ Verified: true, name: name, course: course });
+
+    } else {
+        res.send("Password are not matching");
+      }
+    } catch (err) {
+      console.log("error");
+    }
+  });
 
 // Server listening on the port
 app.listen(port, () => {
